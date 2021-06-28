@@ -16,6 +16,8 @@ export default function Header() {
       <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/"/>
       <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
       <link rel="dns-prefetch" href="https://s.w.org/"/>
+      <script type="text/javascript" src="/srcData_files/jquery.js.download"></script>
+      <script type="text/javascript" src="/srcData_files/jquery-migrate.min.js.download"></script>
       <link rel="stylesheet" id="foundation-icons-css" href="/srcData_files/foundation-icons.css" type="text/css" media="all"/>
       <link rel="stylesheet" id="font-awesome-css" href="/srcData_files/font-awesome.min.css" type="text/css" media="all"/>
       <link rel="stylesheet" id="fl-builder-layout-156-css" href="/srcData_files/156-layout.css" type="text/css" media="all"/>
@@ -24,8 +26,7 @@ export default function Header() {
       <link rel="stylesheet" id="font_awesome-css" href="/srcData_files/font-awesome.min(1).css" type="text/css" media="all"/>
       <link rel="stylesheet" id="hestia_style-css" href="/srcData_files/style.css" type="text/css" media="all"/>   
       <link rel="stylesheet" id="fl-builder-google-fonts-d8b6cbcd8e179c5f8061d31801bcddf6-css" href="/srcData_files/css" type="text/css" media="all"/>
-      <script type="text/javascript" src="/srcData_files/jquery.js.download"></script>
-      <script type="text/javascript" src="/srcData_files/jquery-migrate.min.js.download"></script>
+      
           
     </Head>
           
