@@ -5,6 +5,30 @@ import Head from  'next/head';
 export default function Header() {
   return (
     //////////////////////////////////////////////////////////////////////////
+    <div>
+    <Head>
+
+      <link rel="icon" href="https://dinermanager.com/wp-content/uploads/2017/01/N.png" sizes="32x32" />
+      <link rel="icon" href="https://dinermanager.com/wp-content/uploads/2017/01/N.png" sizes="192x192" />
+      <link rel="apple-touch-icon-precomposed" href="https://dinermanager.com/wp-content/uploads/2017/01/N.png" />
+      <title>Sudheer New Projectr</title>
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"/>
+      <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/"/>
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
+      <link rel="dns-prefetch" href="https://s.w.org/"/>
+      <link rel="stylesheet" id="foundation-icons-css" href="/srcData_files/foundation-icons.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="font-awesome-css" href="/srcData_files/font-awesome.min.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="fl-builder-layout-156-css" href="/srcData_files/156-layout.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="pirate_forms_front_styles-css" href="/srcData_files/front.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="bootstrap-css" href="/srcData_files/bootstrap.min.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="font_awesome-css" href="/srcData_files/font-awesome.min(1).css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="hestia_style-css" href="/srcData_files/style.css" type="text/css" media="all"/>   
+      <link rel="stylesheet" id="fl-builder-google-fonts-d8b6cbcd8e179c5f8061d31801bcddf6-css" href="/srcData_files/css" type="text/css" media="all"/>
+      <script type="text/javascript" src="/srcData_files/jquery.js.download"></script>
+      <script type="text/javascript" src="/srcData_files/jquery-migrate.min.js.download"></script>
+          
+    </Head>
+          
     <header className="header">
     <nav className="navbar navbar-default navbar-fixed-top navbar-color-on-scroll">
      <div className="container">
@@ -161,8 +185,7 @@ export default function Header() {
       <div className="carousel-inner">
        <div className="item next left">
         <div
-         className="page-header header-filter"
-         style={{backgroundImage: 'url("/images/slide1.jpg")'}}
+         className="page-header header-filter slide1"
         >
          <div className="container">
           <div className="row">
@@ -179,8 +202,7 @@ export default function Header() {
        </div>
        <div className="item active left">
         <div
-         className="page-header header-filter"
-         style={{backgroundImage:'url("/images/IMG_9814-copy.jpg")'}}
+         className="page-header header-filter slide2"
          
         >
          <div className="container">
@@ -214,7 +236,7 @@ export default function Header() {
      </div>
     </div>
    </header>
-
+   </div>
 /////////////////////////////////////////////////////////////////////////////////////////////
   )}
 const Link = ({ children, href }) => {
