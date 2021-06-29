@@ -18,8 +18,8 @@ export default function Header() {
       <link rel="dns-prefetch" href="https://s.w.org/"/>
       <script type="text/javascript" src="/srcData_files/jquery.js.download"></script>
       <script type="text/javascript" src="/srcData_files/jquery-migrate.min.js.download"></script>
-      <link rel="stylesheet" id="foundation-icons-css" href="/srcData_files/foundation-icons.css" type="text/css" media="all"/>
-      <link rel="stylesheet" id="font-awesome-css" href="/srcData_files/font-awesome.min.css" type="text/css" media="all"/>
+      <link rel='stylesheet' id='foundation-icons-css'  href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?ver=1.10.5.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=1.10.5.1' type='text/css' media='all' />
       <link rel="stylesheet" id="fl-builder-layout-156-css" href="/srcData_files/156-layout.css" type="text/css" media="all"/>
       <link rel="stylesheet" id="pirate_forms_front_styles-css" href="/srcData_files/front.css" type="text/css" media="all"/>
       <link rel="stylesheet" id="bootstrap-css" href="/srcData_files/bootstrap.min.css" type="text/css" media="all"/>
