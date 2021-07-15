@@ -10,7 +10,7 @@ export default function Carousal()  {
                                 <div className="col-md-8 col-md-offset-2 text-center">
                                     <h2 className="title">JESUS LOVES YOU MINISTRIES</h2>
                                     <h4>We heart fully welcome to our website in the name of Jesus </h4>
-                                    {/* <div className="buttons"> <a href="#" className="btn btn-primary btn-lg">Join with us</a> </div> */}
+                                    <div className="buttons"> <a href="#" className="btn btn-primary btn-lg">Join with us</a> </div>
                                 </div>
                             </div>
                         </div>
