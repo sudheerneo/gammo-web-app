@@ -1,7 +1,7 @@
 
 import BodyClass from './BodyClass';
 import Header from './src/Header';
-import Body from './src/Body';
+import Bodydata from './src/Bodydata';
 import Footer from './src/Footer';
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 		      <BodyClass />	
                   <div className="wrapper">
                         <Header />
-                        <Body />
+                        <Bodydata />
                         <Footer />
                   </div>  
             </div>
