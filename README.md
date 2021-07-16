@@ -1,2 +1,2 @@
-This is a wp website conersion to NEXT JS APP By Sudheer
+This is a wp website conversion to REACT NEXT JS WEBAPP By Sudheer
 
