@@ -28,8 +28,6 @@ export default function Header() {
       <link rel="stylesheet" id="font_awesome-css" href="/srcData_files/font-awesome.min(1).css" type="text/css" media="all"/>
       <link rel="stylesheet" id="hestia_style-css" href="/srcData_files/style.css" type="text/css" media="all"/>   
       <link rel="stylesheet" id="fl-builder-google-fonts-d8b6cbcd8e179c5f8061d31801bcddf6-css" href="/srcData_files/css" type="text/css" media="all"/>
-      <script type='text/javascript' src='http://localhost/wp-content/plugins/social-icons-widget-by-wpzoom/assets/js/social-icons-widget-frontend.js?ver=20170209'></script>
-      
           
     </Head>
           

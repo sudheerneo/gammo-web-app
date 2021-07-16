@@ -3,6 +3,7 @@ import Contactus from './Contactus'
 import Blogupdate from './Blogupdate'
 import Features from './Features'
 import Aboutus from './About'
+import Subscribe from './Subscribe'
 
 class Bodydata extends Component  {
     constructor(){
@@ -17,6 +18,7 @@ class Bodydata extends Component  {
                 <Aboutus />
                 <Blogupdate />
                 <Contactus />
+                <Subscribe />
         
             </div>
         )
