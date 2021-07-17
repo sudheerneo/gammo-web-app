@@ -7,7 +7,8 @@ export default function Blogupdate() {
 					<div className="row">
 						<div className="col-md-8 col-md-offset-2 text-center">
 							<h2 className="title">Recent activities by us</h2>
-							<h5 className="description">We update every activity in our website so keep in touch with our website</h5> </div>
+							<h5 className="description">We update every activity in our website so keep in touch with our website</h5> 
+						</div>
 					</div>
 					<div className="row">
 						<article className="col-md-4">

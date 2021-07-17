@@ -2,7 +2,7 @@ import { Component } from "react";
 import Contactus from './Contactus'
 import Blogupdate from './Blogupdate'
 import Features from './Features'
-import Aboutus from './About'
+import Intro from './Intro'
 import Subscribe from './Subscribe'
 
 class Bodydata extends Component  {
@@ -15,10 +15,10 @@ class Bodydata extends Component  {
             <div className="main main-raised">
 
                 <Features />
-                <Aboutus />
+                <Intro />
                 <Blogupdate />
-                <Contactus />
                 <Subscribe />
+                <Contactus />
         
             </div>
         )
