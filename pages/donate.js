@@ -1,10 +1,10 @@
 
 import BodyClass from './BodyClass';
 import Header from './src/Header';
-import About from './src/About';
+import Donate from './src/Donate';
 import Footer from './src/Footer';
 
-export default function about() {
+export default function donate() {
   
 	
 	return(
@@ -13,7 +13,7 @@ export default function about() {
 		      <BodyClass />	
                   <div className="wrapper">
                         <Header />
-                        <About />
+                        <Donate />
                         <Footer />
                   </div>  
             </div>
