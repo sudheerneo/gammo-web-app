@@ -13,8 +13,10 @@ export default function about() {
 		      <BodyClass />	
                   <div className="wrapper">
                         <Header />
-                        <About />
-                        <Footer />
+                        <div className="main main-raised">
+                              <About />
+                              <Footer />
+                        </div>
                   </div>  
             </div>
 		

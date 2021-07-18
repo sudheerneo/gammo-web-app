@@ -13,8 +13,10 @@ export default function donate() {
 		      <BodyClass />	
                   <div className="wrapper">
                         <Header />
-                        <Donate />
-                        <Footer />
+                        <div className="main main-raised">
+                              <Donate />
+                              <Footer />      
+                        </div>                        
                   </div>  
             </div>
 		
