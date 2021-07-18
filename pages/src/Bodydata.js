@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Contactus from './Contactus'
+// import Contactus from './Contactus'
 import Blogupdate from './Blogupdate'
 import Features from './Features'
 import Intro from './Intro'
@@ -18,7 +18,7 @@ class Bodydata extends Component  {
                 <Intro />
                 <Blogupdate />
                 <Subscribe />
-                <Contactus />
+                {/* <Contactus /> */}
         
             </div>
         )

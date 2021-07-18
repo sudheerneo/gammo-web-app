@@ -1,4 +1,4 @@
-export default function Donate() {
+export default function Prayer() {
     return(
         
 		<div>
@@ -7,20 +7,18 @@ export default function Donate() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-8 col-md-offset-2 text-center">
-							<h2 className="title">DONATIONS</h2>
+							<h2 className="title">Prayer Request</h2>
 							<h5 className="description">Join with us to spread jesus love to everyone</h5> 
 						</div>
 					</div>
+                    <div className="pirate_forms_clearfix"></div>
 					<div className="row">
-						{/* <article className="col-md-4">
-							<div className="card card-plain card-blog">
-								<div className="content">
-									<h6 className="category"><a href="http://localhost/category/jlum/" title="View all posts in JLUM" >JLUM</a> </h6>
-									<h4 className="card-title"><a className="blog-item-title-link" href="http://localhost/welcome/" title="Welcome" rel="bookmark">Welcome</a></h4>
-									<p className="card-description">A warm welcome to our website. Thanks for visiting. live in JESUS and walk with JESUS and love JESUS. automatically your life become beautiful.</p>
-								</div>
-							</div>
-						</article> */}
+						<div className="col-md-5">
+							<p><img className=" wp-image-308 aligncenter" style={{borderRadius: 10}} src='/images/IMG_9887-copy.jpg' alt="" width="657" height="481"  /></p>
+						</div>
+						<div className="col-md-5 col-md-offset-2">
+							<h4>Thus you shall say to Joseph, "Please forgive, I beg you, the transgression of your brothers and their sin, for they did you wrong."' And now, please forgive the transgression of the servants of the God of your father." And Joseph wept when they spoke to him.</h4>
+						</div>
 					</div>
 				</div>
 			</section>

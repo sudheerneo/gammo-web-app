@@ -3,11 +3,31 @@ export default function Contactus() {
         <div>
 
         {/* //contact us sections */}
+
+		<section className="blogs" id="blog" data-sorder="hestia_blog">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-8 col-md-offset-2 text-center">
+							<h2 className="title">Contact Us</h2>
+							<h5 className="description">Join with us to spread jesus love to everyone</h5> 
+						</div>
+					</div>
+					<div className="row">
+								<div >
+									<div className="description">
+										<h4 className="info-title">Communicate with us</h4>
+										<p>Phone Numbers <b>+ 91 9032670949,<br />7036123488, 7036123489</b>
+											<br />E-mail to <b>contact@jlum.org</b></p>
+									</div>
+								</div>	
+					</div>
+				</div>
+			</section>
     <section className="contactus section-image" id="contact" data-sorder="hestia_contact" style={{backgroundImage: "url('/images/contact.jpg')"}}>
 				<div className="container">
 					<div className="row">
 						<div className="col-md-5">
-							<h2 className="title">Get in Touch</h2>
+							<h2 className="title">Reach us</h2>
 							<h5 className="description">Feel free to contact us in the name of Jesus</h5>
 							<div className="description">
 								<div className="info info-horizontal">
@@ -28,14 +48,14 @@ export default function Contactus() {
                                         </p>
 									</div>
 								</div>
-								<div className="info info-horizontal">
+								{/* <div className="info info-horizontal">
 									<div className="icon icon-primary"><i className="fa fa-mobile"></i></div>
 									<div className="description">
 										<h4 className="info-title">Communicate with us</h4>
 										<p>Phone Numbers <b>+ 91 9032670949,<br />7036123488, 7036123489</b>
 											<br />E-mail to <b>contact@jlum.org</b></p>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="col-md-5 col-md-offset-2">
