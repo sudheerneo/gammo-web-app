@@ -1,7 +1,8 @@
 export default function About() {
     return(
-        <div className="main main-raised">
-
+        <div >
+<section className="blogs" id="blog" data-sorder="hestia_blog">
+	<div className="container">
 <div className="row">
 	<div className="col-md-8 col-md-offset-2">
 		<div id="pl-30" className="panel-layout">
@@ -72,7 +73,8 @@ export default function About() {
         </div>
     </div>
 </div>
-
+</div>
+</section>
         </div>
     )
 }

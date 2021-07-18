@@ -3,7 +3,7 @@ export default function Intro() {
     return(
         <div>
 
-<section className="about section-image" id="about" data-sorder="hestia_about" style={{backgroundImage: "url('/images/FScopy.jpg')"}}>
+			<section className="about section-image" id="about" data-sorder="hestia_about" style={{backgroundImage: "url('/images/FScopy.jpg')"}}>
 				<div className="container">
 					<div className="row">
 						<div id="pl-5" className="panel-layout">

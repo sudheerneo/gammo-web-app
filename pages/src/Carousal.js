@@ -1,6 +1,6 @@
 export default function Carousal()  {
     return(
-        <div id="carousel-hestia-generic" className="carousel slide" data-ride="carousel">
+    <div id="carousel-hestia-generic" className="carousel slide" data-ride="carousel">
         <div className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
                 <div className="item active">

@@ -47,28 +47,39 @@ export default function Contactus() {
 										
 										<div className="pirate_forms_wrap">
 											
-											<form method="post" encType="application/x-www-form-urlencoded" className="pirate_forms  form_honeypot-on wordpress-nonce-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on pirate_forms_from_form-on">
-												<div className="pirate_forms_three_inputs_wrap ">
-													<div className="col-xs-12 pirate_forms_three_inputs form_field_wrap contact_name_wrap col-xs-12 col-sm-6 contact_name_wrap pirate_forms_three_inputs form_field_wrap">
-														<input type="text" className="form-control" id="pirate-forms-contact-name" name="pirate-forms-contact-name" className="" placeholder="Your Name" required /> </div>
-													<div className="col-xs-12 pirate_forms_three_inputs form_field_wrap contact_email_wrap col-xs-12 col-sm-6 contact_email_wrap pirate_forms_three_inputs form_field_wrap">
-														<input type="email" className="form-control" id="pirate-forms-contact-email" name="pirate-forms-contact-email" className="" placeholder="Your Email" required />  </div>
-													<div className="col-xs-12 pirate_forms_three_inputs form_field_wrap contact_subject_wrap col-xs-12 contact_subject_wrap pirate_forms_three_inputs form_field_wrap">
-														<input type="text" className="form-control" id="pirate-forms-contact-subject" name="pirate-forms-contact-subject" className="" placeholder="Subject" required   /> </div>
+										<form method="post" encType="application/x-www-form-urlencoded" className="pirate_forms  form_honeypot-on wordpress-nonce-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on pirate_forms_from_form-on">
+											
+												<div className="sib_signup_box_inside_3">
+													<div className="col-sm-6">
+														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-user"></i></span>
+															<input type="text" className="sib-email-area form-control" name="messagerName" required="required" placeholder="Name" /> 
+														</div>
+													</div>
+													<div className="col-sm-6">
+														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-phone"></i></span>
+															<input type="number" className="sib-email-area form-control" name="messagerPhnumber" required="required" placeholder="Number" /> 
+														</div>
+													</div>
+													<div className="col-sm-12">
+													<div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
+															<input type="email" className="sib-email-area form-control" name="messagerEmail" required="required" placeholder="Email" /> 
+														</div>
+													</div>
+													<div className="col-sm-12">
+													<div className="input-group"> <span className="input-group-addon"><i className="fa fa-pencil"></i></span>
+															<input type="text" className="sib-email-area form-control" name="messagerSubject" required="required" placeholder="Subject" /> 
+														</div>
+													</div>
+													<div className="col-sm-12">
+														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-pencil"></i></span>
+															<textarea type="text" rows="6" cols="30" className="sib-email-area form-control" name="messsagerMsg" required="required" placeholder="Write a message for us" /> 
+														</div>
+													</div>
 												</div>
-												<div className="col-xs-12 form_field_wrap contact_message_wrap col-xs-12 contact_message_wrap pirate_forms_three_inputs form_field_wrap">
-													<textarea rows="5" cols="30" className="form-control" id="pirate-forms-contact-message" name="pirate-forms-contact-message" className="" placeholder="Your message" required ></textarea>
-												</div>
+												
 												<div className="col-xs-12 form_field_wrap contact_submit_wrap">
-													<button type="submit" className="pirate-forms-submit-button btn btn-primary " id="pirate-forms-contact-submit" name="pirate-forms-contact-submit" className="pirate-forms-submit-button btn btn-primary " placeholder="">Send Message</button>
+													<button type="submit" className=" btn btn-primary "  placeholder="">Send now</button>
 												</div>
-												{/* <input type="hidden" id="pirate_forms_ajax" name="pirate_forms_ajax" className="" placeholder="" value="0" />
-												<div className="form_field_wrap hidden" style={{display: "none"}}>
-													<input type="text" id="form_honeypot" name="honeypot" className="" placeholder="" value="" />
-												</div>
-												<input type="hidden" id="pirate_forms_from_widget" name="pirate_forms_from_widget" className="" placeholder="" value="0" />
-												<input type="hidden" id="wordpress-nonce" name="wordpress-nonce" className="" placeholder="" value="d02af0b2c6" />
-												<input type="hidden" id="pirate_forms_from_form" name="pirate_forms_from_form" className="" placeholder="" value="626dcd66ba" />  */}
 											</form>
 											<div className="pirate_forms_clearfix"></div>
 										</div>
