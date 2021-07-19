@@ -1,19 +1,37 @@
+import { Component, useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import Head from  'next/head';
 import Navbar from './Navbar'
 import Carousal from  './Carousal';
 
-export default function Header() {
+const out = (val) => console.log(val);
+
+export default class Header extends Component  {
+  constructor(){
+    super()
+    this.state = {title: 'JLUM Nextjs Project'};
+  }
+
+  
+  componentDidMount() {
+    const url = window.location.pathname;
+    url === '/about' ? this.setState({title: 'JLUM-About'}) : 0
+    url === '/prayer-request' ? this.setState({title: 'JLUM-Prayer request'}) : 0
+    url === '/contact' ? this.setState({title: 'JLUM-Contact'}) : 0
+    url === '/donate' ? this.setState({title: 'JLUM=Donate'}) : 0
+  }
+ 
+render(){
   return (
     //////////////////////////////////////////////////////////////////////////
     <div>
-    <Head>
+   <Head>
 
       <link rel="icon" href='/images/cropped-logo-192x192.png' sizes="32x32" />
       <link rel="icon" href='/images/cropped-logo-192x192.png' sizes="192x192" />
       <link rel="apple-touch-icon-precomposed" href='images/cropped-logo-180x180.png' />
       <meta name="msapplication-TileImage" content='/images/cropped-logo-270x270.png' />
-      <title>JLUM NEXTjs</title>
+      <title>{this.state.title}</title>
       <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"/>
       <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/"/>
       <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
@@ -38,23 +56,6 @@ export default function Header() {
    </header>
    </div>
 /////////////////////////////////////////////////////////////////////////////////////////////
-  )}
-const Link = ({ children, href }) => {
-  const router = useRouter()
-  return (
-    <a
-      href="#"
-      onClick={(e) => {
-        e.preventDefault()
-        router.push(href)
-      }}
-    >
-      {children}
-      <style jsx>{`
-        a {
-          margin-right: 10px;
-        }
-      `}</style>
-    </a>
   )
-}
+}}
+
