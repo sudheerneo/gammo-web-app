@@ -1,13 +1,31 @@
 import { Component } from "react";
 import Link from 'next/link'
+import { signIn, signOut, useSession } from 'next-auth/client'
 const out = (val) => {console.log(val)}
+
+const withSession = Component => props => {
+	const [session, loading] = useSession()
+  
+	  // if the component has a render property, we are good
+	  if (Component.prototype.render) { 
+		return <Component session={session} loading={loading} {...props} />
+	  }
+  
+	  // if the passed component is a function component, there is no need for this wrapper
+	  throw new Error([
+	   "You passed a function component, `withSession` is not needed.",
+	   "You can `useSession` directly in your component."
+	  ].join("\n"))
+  };
+  
+  // Usage
 
 export default class Navbar extends Component {
   constructor() {
     super()
     this.state = {donateBtn: false}
   }
-
+	
   componentDidMount() {
 	 const url = window.location.pathname;
 	 url === '/donate' ? this.setState({donateBtn: "green"}) :  0
@@ -16,6 +34,7 @@ export default class Navbar extends Component {
   
 
   render() {  
+	const {session, loading} = this.props
   return(
         <div>
 			 <nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll">
@@ -40,8 +59,13 @@ export default class Navbar extends Component {
 							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/prayer-request"><a title="prayer request" ><i className="_mi _before dashicons dashicons-groups" aria-hidden="true"> </i><span> Payer Request</span></a></Link></li>
 							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/contact"><a title="contact" ><i className="_mi _before dashicons dashicons-location" aria-hidden="true"> </i><span> Contact</span></a></Link></li>
 							<li id="menu-item-197" style={{backgroundColor: this.state.donateBtn}} className="btn btn-round btn-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-197"><Link href="/donate"><a title="Donate" ><i className="_mi _before dashicons dashicons-awards" aria-hidden="true"></i><span>  Donate <i className="_mi _before dashicons dashicons-awards" aria-hidden="true"></i></span></a></Link></li>
-              				<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/login"><a title="Login" ><i className="_mi _before dashicons dashicons-admin-network" aria-hidden="true"> </i><span></span></a></Link></li>
-						
+              				{!session && <>
+								<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/api/auth/signin"><a title="Login" ><i className="_mi _before dashicons dashicons-admin-network" aria-hidden="true"> </i><span></span></a></Link></li>
+							</>}
+							{session && <>									
+							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/profile"><a title="profile" ><i  className="_mi _before dashicons dashicons-" aria-hidden="true"> </i><strong>{session.user.email || session.user.name}</strong><span></span></a></Link></li>
+							
+							</>}
 						</ul>
 					</div>
 				</div>
@@ -51,3 +75,5 @@ export default class Navbar extends Component {
         </div>
     )
 }}
+
+const ClassComponentWithSession = withSession(Navbar)
