@@ -4,9 +4,9 @@ const out = (val) => {console.log(val)}
 export default class Carousal extends Component  {
     constructor() {
         super()
-        this.state = {carousalImage: "/images/yoy.jpg", carousalBtn: "block", carousalHeading: "JESUS LOVES YOU MINISTRIES"}
+        this.state = {carousalImage: "/images/home.jpg", carousalBtn: "block", carousalHeading: "JESUS LOVES YOU MINISTRIES"}
         this.state.staticdata = {
-          carousals: {about: '/images/abouty.jpg', contact: '/images/hands-coffee-smartphone-technology.jpg', preq: '/images/prayer.jpg', donate: '/images/FScopy.jpg' }
+          carousals: {about: '/images/abouty.jpg', contact: '/images/hands-coffee-smartphone-technology.jpg', preq: '/images/prayer.jpg', donate: '/images/donation.jpg' }
         }
       }
 

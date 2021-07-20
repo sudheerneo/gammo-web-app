@@ -17,10 +17,8 @@ const withSession = Component => props => {
 	   "You can `useSession` directly in your component."
 	  ].join("\n"))
   };
-  
-  // Usage
 
-export default class Navbar extends Component {
+class Navbarclass extends Component {
   constructor() {
     super()
     this.state = {donateBtn: false}
@@ -34,7 +32,7 @@ export default class Navbar extends Component {
   
 
   render() {  
-	const {session, loading} = this.props
+	const {session, loading} = this.props;
   return(
         <div>
 			 <nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll">
@@ -42,7 +40,7 @@ export default class Navbar extends Component {
 					<div className="navbar-header">
 						<button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#main-navigation"> <span className="sr-only">Toggle Navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
 						<div className="title-logo-wrapper">
-							<a className="navbar-brand" href="/" title="JLUM"><img src="/images/copy-copy.png" /></a>
+							<a className="navbar-brand" href="/" title="JLUM"><img src="/images/navlogo.png" /></a>
 						</div>
 					</div>
 					<div id="main-navigation" className="collapse navbar-collapse">
@@ -59,13 +57,23 @@ export default class Navbar extends Component {
 							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/prayer-request"><a title="prayer request" ><i className="_mi _before dashicons dashicons-groups" aria-hidden="true"> </i><span> Payer Request</span></a></Link></li>
 							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/contact"><a title="contact" ><i className="_mi _before dashicons dashicons-location" aria-hidden="true"> </i><span> Contact</span></a></Link></li>
 							<li id="menu-item-197" style={{backgroundColor: this.state.donateBtn}} className="btn btn-round btn-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-197"><Link href="/donate"><a title="Donate" ><i className="_mi _before dashicons dashicons-awards" aria-hidden="true"></i><span>  Donate <i className="_mi _before dashicons dashicons-awards" aria-hidden="true"></i></span></a></Link></li>
-              				{!session && <>
+              				
+							{/* if user not logged in display login */}
+							{!this.props.session && <>
 								<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/api/auth/signin"><a title="Login" ><i className="_mi _before dashicons dashicons-admin-network" aria-hidden="true"> </i><span></span></a></Link></li>
 							</>}
-							{session && <>									
-							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/profile"><a title="profile" ><i  className="_mi _before dashicons dashicons-" aria-hidden="true"> </i><strong>{session.user.email || session.user.name}</strong><span></span></a></Link></li>
+							{/* if user logged in display menu*/}
+							{this.props.session && <>									
+							<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img style={{verticalAlign: "middle", width: 30, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"></span></a>
+								<ul role="menu" className=" dropdown-menu">
+									<p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+									<li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true"></i><span>Dashboard</span></a></Link></li>
+									<li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="settings" ><i className="_mi _before dashicons dashicons-admin-generic" aria-hidden="true"></i><span>Settings</span></a></Link></li>
+									<li id="menu-item-155" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><Link href="/signout"><a title="signout"><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Logout</span></a></Link></li>
+								</ul>
+							</li>
+							</>}
 							
-							</>}{out(session)}
 						</ul>
 					</div>
 				</div>
@@ -76,4 +84,7 @@ export default class Navbar extends Component {
     )
 }}
 
-const ClassComponentWithSession = withSession(Navbar)
+const Navbar = withSession(Navbarclass)
+export default Navbar;
+
+

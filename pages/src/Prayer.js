@@ -64,7 +64,7 @@ export default function Prayer() {
 												</div>
 												
 												<div className="col-xs-12 form_field_wrap contact_submit_wrap">
-													<button type="submit" className=" btn btn-primary " placeholder="">Pray for me <i className="_mi _before dashicons dashicons-share-alt" aria-hidden="true"></i></button>
+													<button type="submit" className=" btn btn-success "  style={{backgroundColor: "green"}} placeholder="">Pray for me <i className="_mi _before dashicons dashicons-share-alt" aria-hidden="true"></i></button>
 												</div>
 												<div className="col-sm-12 text-center">
 													<p style={{textAlign: "center", fontSize: 14}}>Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God - Philippians 4:6</p>

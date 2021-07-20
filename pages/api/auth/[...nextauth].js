@@ -121,5 +121,5 @@ export default NextAuth({
   theme: 'light',
 
   // Enable debug messages in the console if you are having problems
-  debug: true,
+  debug: false,
 })
