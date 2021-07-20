@@ -65,7 +65,7 @@ export default class Navbar extends Component {
 							{session && <>									
 							<li id="menu-item-199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><Link href="/profile"><a title="profile" ><i  className="_mi _before dashicons dashicons-" aria-hidden="true"> </i><strong>{session.user.email || session.user.name}</strong><span></span></a></Link></li>
 							
-							</>}
+							</>}{out(session)}
 						</ul>
 					</div>
 				</div>
