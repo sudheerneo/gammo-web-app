@@ -1,7 +1,7 @@
 export default function Subscribe() {
     return(
         <div>
-            <section className="subscribe-line subscribe-line-image" id="subscribe" data-sorder="hestia_subscribe" style={{backgroundImage: "none"}}>
+            <section className="subscribe-line subscribe-line-image" id="subscribe" data-sorder="hestia_subscribe" style={{backgroundImage: " url('/images/contact.jpg') " }}>
 				<div className="container">
 					<div className="row text-center">
 						<div className="col-md-8 col-md-offset-2 text-center">
