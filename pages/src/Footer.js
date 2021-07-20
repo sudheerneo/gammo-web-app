@@ -15,7 +15,7 @@ export default function Footer(){
 												<a className="zoom-social_icons-list__link" href="https://www.youtube.com/channel/UC26_CXwwmhackoB_H8hjtPQ" target="_blank"> <span className="screen-reader-text">youtube</span> <i className="fa fa-youtube-square" style={{fontSize: 22}}></i> </a>
 											</li>
 					</ul>
-					{/* <div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title="Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards"><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  ></i></a> </span></div> */}
+					<div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title="Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards"><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  ></i></a> </span></div>
 				</div>
 			</footer>
 <script type="text/javascript" src="/srcData_files/windowdom.js"></script>
