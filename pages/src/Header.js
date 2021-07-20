@@ -18,7 +18,7 @@ export default class Header extends Component  {
     url === '/about' ? this.setState({title: 'JLUM-About'}) : 0
     url === '/prayer-request' ? this.setState({title: 'JLUM-Prayer request'}) : 0
     url === '/contact' ? this.setState({title: 'JLUM-Contact'}) : 0
-    url === '/donate' ? this.setState({title: 'JLUM=Donate'}) : 0
+    url === '/donate' ? this.setState({title: 'JLUM-Donate'}) : 0
   }
  
 render(){
