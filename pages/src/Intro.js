@@ -5,7 +5,7 @@ export default function Intro() {
 
 			<section className="about section-image" id="about" data-sorder="hestia_about" style={{backgroundImage: "url('/images/FScopy.jpg')"}}>
 				<div className="container">
-					<div className="row">
+					<div className="row"style={{verticalAlign: "center"}}>
 						<div id="pl-5" className="panel-layout">
 							<div id="pg-5-0" className="panel-grid panel-no-style">
 								<div id="pgc-5-0-0" className="panel-grid-cell">
