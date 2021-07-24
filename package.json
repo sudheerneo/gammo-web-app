@@ -9,8 +9,9 @@
     "export": "npm run build && next export -o _static"
   },
   "dependencies": {
-   "@mapbox/node-pre-gyp": "github:mapbox/node-pre-gyp",
+    "@mapbox/node-pre-gyp": "github:mapbox/node-pre-gyp",
     "@next-auth/firebase-adapter": "^0.1.2",
+    "@prisma/client": "^2.16.1",
     "bootstrap": "^5.0.1",
     "firebase": "^8.8.0",
     "jquery": "^3.6.0",
