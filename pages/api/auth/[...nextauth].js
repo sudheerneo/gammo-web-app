@@ -1,5 +1,23 @@
 import NextAuth from "next-auth"
 import Providers from "next-auth/providers"
+import { FirebaseAdapter } from "@next-auth/firebase-adapter"
+import firebase from "firebase/app"
+import "firebase/firestore"
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCAaKd92X-jWenJRfgnqw_7GfcZMAK3BEU",
+    authDomain: "jlum-db.firebaseapp.com",
+    projectId: "jlum-db",
+    storageBucket: "jlum-db.appspot.com",
+    messagingSenderId: "248776359083",
+    appId: "1:248776359083:web:de7c580cf996fd50088bee",
+    measurementId: "G-Y9N255J7H7"
+}
+
+const firestore = (
+  firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
+).firestore()
+
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -24,13 +42,15 @@ export default NextAuth({
     //   from: process.env.EMAIL_FROM
     // }),
   ],
+  
+  adapter: FirebaseAdapter(firestore),
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases
   //
   // Notes:
   // * You must install an appropriate node_module for your database
   // * The Email provider requires a database (OAuth providers do not)
-  database: process.env.DATABASE_URL,
+ // database: process.env.DATABASE_URL,
 
   // The secret should be set to a reasonably long random string.
   // It is used to sign cookies and to sign and encrypt JSON Web Tokens, unless
