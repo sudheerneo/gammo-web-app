@@ -6,14 +6,23 @@ import Providers from "next-auth/providers"
 export default NextAuth({
   // https://next-auth.js.org/configuration/providers
   providers: [
-    Providers.Email({
-      server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM,
-    }),
+    
    Providers.Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
-    }),
+    clientId: process.env.GOOGLE_ID,
+    clientSecret: process.env.GOOGLE_SECRET,
+  }),
+    
+    // Providers.Email({
+    //   server: {
+    //     host: process.env.EMAIL_SERVER_HOST,
+    //     port: process.env.EMAIL_SERVER_PORT,
+    //     auth: {
+    //       user: process.env.EMAIL_SERVER_USER,
+    //       pass: process.env.EMAIL_SERVER_PASSWORD
+    //     }
+    //   },
+    //   from: process.env.EMAIL_FROM
+    // }),
   ],
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases
@@ -63,7 +72,7 @@ export default NextAuth({
   // pages is not specified for that route.
   // https://next-auth.js.org/configuration/pages
   pages: {
-    // signIn: '/auth/signin',  // Displays signin buttons
+    // signIn: '/signin',  // Displays signin buttons
     //  signOut: '/auth/signout', // Displays form with sign out button
     // error: '/auth/error', // Error code passed in query string as ?error=
     // verifyRequest: '/auth/verify-request', // Used for check email page
@@ -89,5 +98,5 @@ export default NextAuth({
   theme: 'dark',
 
   // Enable debug messages in the console if you are having problems
-  debug: false,
+  debug: true,
 })

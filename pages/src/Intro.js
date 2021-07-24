@@ -3,9 +3,9 @@ export default function Intro() {
     return(
         <div>
 
-			<section className="about section-image" id="about" data-sorder="hestia_about" style={{backgroundImage: "url('/images/FScopy.jpg')"}}>
+			<section className="about section-image" id="about" data-sorder="hestia_about" style={{backgroundImage: "url('/images/donation.jpg')"}}>
 				<div className="container">
-					<div className="row"style={{verticalAlign: "center"}}>
+					<div className="row">
 						<div id="pl-5" className="panel-layout">
 							<div id="pg-5-0" className="panel-grid panel-no-style">
 								<div id="pgc-5-0-0" className="panel-grid-cell">
