@@ -5,7 +5,7 @@ import firebase from "firebase/app"
 import "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAaKd92X-jWenJRfgnqw_7GfcZMAK3BEU",
+    apiKey: "AIzaSyCAaKd92X-jWenJRfgnqw_7GfcZMAK3BEU",
     authDomain: "jlum-db.firebaseapp.com",
     projectId: "jlum-db",
     storageBucket: "jlum-db.appspot.com",
@@ -19,15 +19,13 @@ const firestore = (
 ).firestore()
 
 
-// For more information on each option (and a full list of options) go to
-// https://next-auth.js.org/configuration/options
+
 export default NextAuth({
-  // https://next-auth.js.org/configuration/providers
   providers: [
     
    Providers.Google({
-    clientId: process.env.GOOGLE_ID,
-    clientSecret: process.env.GOOGLE_SECRET,
+    clientId: 248776359083-ka20h07pca73356vgg986eogrbuste21.apps.googleusercontent.com,
+    clientSecret: y0xtP17UbQDmbMK8zwizQGN2,
   }),
     
     // Providers.Email({
@@ -41,6 +39,9 @@ export default NextAuth({
     //   },
     //   from: process.env.EMAIL_FROM
     // }),
+
+
+
   ],
   
   adapter: FirebaseAdapter(firestore),
@@ -61,7 +62,7 @@ export default NextAuth({
     // Use JSON Web Tokens for session instead of database sessions.
     // This option can be used with or without a database for users/accounts.
     // Note: `jwt` is automatically set to `true` if no database is specified.
-    jwt: true,
+    jwt: false,
 
     // Seconds - How long until an idle session expires and is no longer valid.
     // maxAge: 30 * 24 * 60 * 60, // 30 days
