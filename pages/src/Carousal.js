@@ -4,11 +4,16 @@ const out = (val) => {console.log(val)}
 export default class Carousal extends Component  {
     constructor() {
         super()
-        this.state = {carousalImage: "/images/home.jpg", carousalBtn: "block", carousalHeading: "JESUS LOVES YOU MINISTRIES"}
+        this.state = {mobilePadding: 140, caniShow: 'none', carousalImage: "/images/home.jpg", carousalBtn: "block", carousalHeading: "JESUS LOVES YOU MINISTRIES"}
         this.state.staticdata = {
           carousals: {about: '/images/abouty.jpg', contact: '/images/hands-coffee-smartphone-technology.jpg', preq: '/images/prayer.jpg', donate: '/images/donation.jpg' }
         }
       }
+    
+    hideCarousalOnPhone(url) {
+        console.log('mobile')
+        url === '/' ? this.setState({caniShow: 'block', mobilePadding: 0}) : 0 ;
+    }
 
     componentDidMount() {
         const url = window.location.pathname;
@@ -20,18 +25,17 @@ export default class Carousal extends Component  {
         url === '/donate' ? this.setState({carousalImage: photo.donate}) : 0
         url === '/' ? 0 : this.setState({carousalHeading: headings})
         url === '/' ? 0 : this.setState({carousalBtn: "none"})
-
-        
+        window.innerWidth < 768 ? this.hideCarousalOnPhone(url) : this.setState({ caniShow: 'block', mobilePadding: 0 })
 
     }
 
 render() {
     return(
     <div id="carousel-hestia-generic" className="carousel slide" data-ride="carousel">
-        <div className="carousel slide" data-ride="carousel">
+        <div className="carousel slide" data-ride="carousel" style={{paddingTop: this.state.mobilePadding}} >
             <div className="carousel-inner">
                 <div className="item active">
-                    <div className="page-header header-filter" style={{backgroundImage: "url('"+this.state.carousalImage+"')"}}>
+                    <div className="page-header header-filter" style={{ display: this.state.caniShow, backgroundImage: "url('"+this.state.carousalImage+"')"}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-8 col-md-offset-2 text-center">
