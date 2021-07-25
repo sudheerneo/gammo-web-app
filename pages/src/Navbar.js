@@ -26,7 +26,9 @@ class Navbarclass extends Component {
 	
   componentDidMount() {
     const windowWidth = window.innerWidth;
-    windowWidth < 768 ? this.setState({isMobile : true}) : this.setState({isMobile : false})
+    windowWidth < 768 ? this.setState({isMobile : true}) : this.setState({isMobile : false}) ;
+
+	
  }
 
   
@@ -50,7 +52,7 @@ class Navbarclass extends Component {
 								<>
 								{!this.props.session && <>
 								<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown btn btn-round btn-primary"><a title='Login'  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-admin-network" aria-hidden="true"></i> Login</span></a>
-								<ul role="menu" className=" dropdown-menu" style={{padding: 10}}>
+								<ul role="menu" className=" dropdown-menu" >
 									<li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" aria-hidden="true"></i><span>Google Login</span></a></li>
 									{/* <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="Login with username and pass" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Login with credentials</span></a></li> */}
 								</ul>
