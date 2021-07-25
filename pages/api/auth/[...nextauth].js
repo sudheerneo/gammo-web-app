@@ -3,24 +3,23 @@ import Providers from "next-auth/providers"
 import { FirebaseAdapter } from "@next-auth/firebase-adapter"
 import firebase from "firebase/app"
 import "firebase/firestore"
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCAaKd92X-jWenJRfgnqw_7GfcZMAK3BEU",
-    authDomain: "jlum-db.firebaseapp.com",
-    projectId: "jlum-db",
-    storageBucket: "jlum-db.appspot.com",
-    messagingSenderId: "248776359083",
-    appId: "1:248776359083:web:de7c580cf996fd50088bee",
-    measurementId: "G-Y9N255J7H7"
+    apiKey:  process.env.FIREBASE_apiKey,
+    authDomain:  process.env.FIREBASE_authDomain,
+    projectId:  process.env.FIREBASE_projectId,
+    storageBucket:  process.env.FIREBASE_storageBucket,
+    messagingSenderId:  process.env.FIREBASE_messagingSenderId,
+    appId:  process.env.FIREBASE_appId,
+    measurementId:  process.env.FIREBASE_measurementId
 }
+
 const firestore = (
   firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
 ).firestore()
 
 
-// For more information on each option (and a full list of options) go to
-// https://next-auth.js.org/configuration/options
 export default NextAuth({
-  // https://next-auth.js.org/configuration/providers
   providers: [
     
    Providers.Google({
