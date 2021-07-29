@@ -72,7 +72,7 @@ export default function Donate() {
 												</div>
 												
 												<div className="col-xs-12 form_field_wrap contact_submit_wrap">
-													<button type="submit" className=" btn btn-success "  style={{backgroundColor: "green"}} placeholder="">Donate with <i className="_mi _before dashicons dashicons-heart" aria-hidden="true"></i></button>
+													<button type="submit" className=" btn btn-primary " placeholder="">Donate with <i className="_mi _before dashicons dashicons-heart" aria-hidden="true"></i></button>
 												</div>
 												<div className="col-sm-12 text-center">
 													<p style={{textAlign: "center", fontSize: 14}}>And my God will supply every need of yours according to his riches in glory in Christ Jesus - Philippians 4:19</p>
