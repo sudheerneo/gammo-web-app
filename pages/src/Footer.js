@@ -7,12 +7,12 @@ export default function Footer(){
 				<div className="container">
 					<div className="copyright pull-left"> 
 					<Link href="https://www.facebook.com/Jesus-Loves-you-Ministries-JLUM-235036396947583/">
-							<a> <i className="_mi _before dashicons dashicons-facebook" aria-hidden="true" style={{color: 'blue'}}> </i></a>
+							<a> <i className="_mi _before dashicons dashicons-facebook" aria-hidden="true" style={{color: 'lightblue', padding: 10}}> </i></a>
 						</Link> and 
 						<Link href="https://www.youtube.com/channel/UC26_CXwwmhackoB_H8hjtPQ">
-							<a> <i className="_mi _before dashicons dashicons-youtube" aria-hidden="true" style={{color: 'red', fontSize:24}}> </i> </a>
+							<a> <i className="_mi _before dashicons dashicons-youtube" aria-hidden="true" style={{color: 'red', fontSize:24, padding: 10}}> </i> </a>
 						</Link> 
-						&nbsp follow us on social platforms						 
+						&nbsp; follow us on social platforms						 
 					</div>
 				
 					<div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title='Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards'><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  style={{color: 'deeppink'}}></i></a> </span></div>
