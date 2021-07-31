@@ -12,6 +12,7 @@
     "@mapbox/node-pre-gyp": "github:mapbox/node-pre-gyp",
     "@next-auth/firebase-adapter": "^0.1.2",
     "@prisma/client": "^2.16.1",
+    "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "firebase": "^8.8.0",
     "jquery": "^3.6.0",
@@ -22,6 +23,7 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "react": "17.0.1",
     "react-bootstrap": "^1.6.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "swr": "^0.5.6"
   }
 }
