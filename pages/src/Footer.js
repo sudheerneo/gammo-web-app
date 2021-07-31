@@ -13,7 +13,7 @@ export default function Footer(){
 						<Link href="https://www.youtube.com/channel/UC26_CXwwmhackoB_H8hjtPQ">
 							<a> <i className="_mi _before dashicons dashicons-youtube" aria-hidden="true" style={{color: 'red', fontSize:24}}> </i> </a>
 						</Link> 
-						&nbsp; please follow us	on social platforms					 
+						&nbsp; please like us, follow us			 
 					</div>
 				
 					<div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title='Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards'><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  style={{color: 'green'}}></i></a> </span></div>
