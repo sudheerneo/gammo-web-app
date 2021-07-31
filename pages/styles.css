@@ -1827,6 +1827,18 @@ select.form-control[multiple],
 	text-transform: uppercase;
 }
 
+.navbar .navbar-nav > li > a.user-area {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+ div > div.navbar-header > div.navbar-toggle.user-area {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	
+ }
+
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
 	color: inherit;
@@ -4952,7 +4964,7 @@ li.yith_magnifier_thumbnail a {
 
 @media (min-width: 992px) {
 	.navbar .navbar-collapse {
-		text-align: center;
+		text-align: left;
 	}
 
     .blog-posts-wrap > article:nth-child(even) {
@@ -5013,6 +5025,10 @@ li.yith_magnifier_thumbnail a {
 		padding-top: 8px;
 	}
 
+	ul#menu-t-menu.footer-menu.pull-left {
+		text-align: center !important;
+	}
+
 	.form-horizontal .form-group-lg .control-label {
 		padding-top: 13px;
 		font-size: 18px;
@@ -5052,7 +5068,7 @@ li.yith_magnifier_thumbnail a {
     .navbar .navbar-collapse {
         display: table-cell !important;
         vertical-align: middle;
-        text-align: right;
+        text-align: left;
         width: 100%;
     }
 }
@@ -5061,8 +5077,8 @@ li.yith_magnifier_thumbnail a {
 	.navbar.navbar-transparent .dropdown-menu li > a > i {
 		color: #fff;
 	}
-
-	.navbar. .dropdown-menu li > a > i {
+	
+	.navbar .dropdown-menu li > a > i {
 		color: #333;
 	}
 
@@ -5121,9 +5137,17 @@ li.yith_magnifier_thumbnail a {
 	}
 
 	.navbar .navbar-nav li > a {
-		text-align: center;
+		text-align: left;
+	}
+	.navbar .navbar-nav li  .caret {
+		float: right!important;
 	}
 
+	.dropdown-menu {
+		right: 0 !important;
+		left: auto;
+
+	}
 	.navbar-default .navbar-nav .open .dropdown-menu {
 		background-color: #f3f3f3;
 	}
