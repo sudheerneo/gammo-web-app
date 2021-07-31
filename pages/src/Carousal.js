@@ -1,5 +1,4 @@
 import { Component } from "react"
-const out = (val) => {console.log(val)}
 
 export default class Carousal extends Component  {
     constructor() {
@@ -11,7 +10,6 @@ export default class Carousal extends Component  {
       }
     
     hideCarousalOnPhone(url) {
-        console.log('mobile')
         url === '/' ? this.setState({caniShow: 'block', mobilePadding: 0}) : 0 ;
     }
 
@@ -26,6 +24,10 @@ export default class Carousal extends Component  {
         url === '/' ? 0 : this.setState({carousalHeading: headings})
         url === '/' ? 0 : this.setState({carousalBtn: "none"})
         window.innerWidth < 768 ? this.hideCarousalOnPhone(url) : this.setState({ caniShow: 'block', mobilePadding: 0 })
+
+        window.innerWidth < 768 &&  url === '/'  ? this.setState({carousalImage: '/images/mobileSlider.jpg'}) : 0
+
+
 
     }
 

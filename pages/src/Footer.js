@@ -5,16 +5,17 @@ export default function Footer(){
 
 <footer className="footer footer-black footer-big">
 				<div className="container">
-					<ul id="menu-t-menu" className="footer-menu pull-left">
-						<li id="menu-item-467" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-467">Follow Us on social platforms</li>
-						<li className="zoom-social_icons-list__item">
-												<a className="zoom-social_icons-list__link" href="https://www.facebook.com/Jesus-Loves-you-Ministries-JLUM-235036396947583/" target="_blank"><span className="screen-reader-text" >facebook</span><i className="fa fa-facebook-square" style={{fontSize: 22}}></i> </a>
-											</li>
-											<li className="zoom-social_icons-list__item">
-												<a className="zoom-social_icons-list__link" href="https://www.youtube.com/channel/UC26_CXwwmhackoB_H8hjtPQ" target="_blank"> <span className="screen-reader-text">youtube</span> <i className="fa fa-youtube-square" style={{fontSize: 22}}></i> </a>
-											</li>
-					</ul>
-					<div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title='Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards'><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  ></i></a> </span></div>
+					<div className="copyright pull-left"> 
+					<Link href="https://www.facebook.com/Jesus-Loves-you-Ministries-JLUM-235036396947583/">
+							<a> <i className="_mi _before dashicons dashicons-facebook" aria-hidden="true" style={{color: 'blue'}}> </i></a>
+						</Link> and 
+						<Link href="https://www.youtube.com/channel/UC26_CXwwmhackoB_H8hjtPQ">
+							<a> <i className="_mi _before dashicons dashicons-youtube" aria-hidden="true" style={{color: 'red', fontSize:24}}> </i> </a>
+						</Link> 
+						&nbsp follow us on social platforms						 
+					</div>
+				
+					<div className="copyright pull-right"> <Link href="/"><a>Jesus Loves You Ministries</a></Link> | <span data-toggle="tooltip" title='Hello I am Sudheer, Fullstack Web App Developmement expert. Follow us to get your awesome projects like this - Best Regards'><a href="http://sudheerinfo.com/" > Made with <i className="_mi _before dashicons dashicons-heart"  style={{color: 'deeppink'}}></i></a> </span></div>
 				</div>
 			</footer>
 <script type="text/javascript" src="/srcData_files/windowdom.js"></script>
