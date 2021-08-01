@@ -42,7 +42,7 @@ render() {
                             <div className="row">
                                 <div className="col-md-8 col-md-offset-2 text-center">
                                     <h2 className="title">{this.state.carousalHeading}</h2>
-                                    <h4 style={{display: this.state.carousalBtn}}> heartily welcomes you </h4>
+                                    <h3 style={{display: this.state.carousalBtn}}> heartily welcomes you </h3>
                                     <div className="buttons" style={{display: this.state.carousalBtn}}> <a href="#" className="btn btn-primary btn-lg">Join with us</a> </div>
                                 </div>
                             </div>
