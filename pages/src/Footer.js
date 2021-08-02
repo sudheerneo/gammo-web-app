@@ -3,7 +3,7 @@ export default function Footer(){
     return(
         <div>
 
-<footer className="footer footer-black footer-big">
+<footer className="footer footer-black footer-big" style={{ fontSize: 10 }}>
 				<div className="container">
 					<div className="copyright pull-left"> 
 	    				We are on 
