@@ -4,7 +4,15 @@ import Link from 'next/link'
 
 export default function Intro() {
 const [ isMobile, setMobile ] = useState(false)
-window.innerWidth < 764 ? this.setState({ isMobile: true}) : this.setState({ isMobile: false})
+
+useEffect(()=>{
+    const fetchData = async () => {
+      const winSize = await window.innerWidth;
+      winSize < 764 ? this.setState({ isMobile: true}) : this.setState({ isMobile: false})
+
+    }
+    fetchData()
+  }, []);
 
 
 
