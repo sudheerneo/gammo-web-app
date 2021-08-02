@@ -6,8 +6,8 @@ export default function Features() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-8 col-md-offset-2">
-							<h2 className="title">Why our ministries is the best</h2>
-							<h5 className="description">In our events you&#039;ll find vibrant, contemporary Christians who love the Lord Jesus Christ and express that love in lively praise and worship and in caring relationships.</h5> </div>
+							<h2 className="title">Why our JLUM ministries is so blessed</h2>
+							<h5 className="description">In our events you&#039;ll find vibrant, contemporary followers who love the Lord Jesus Christ and express that love in lively praise and worship and in caring relationships.</h5> </div>
 					</div>
 					<div className="row">
 						<div className="col-md-4 customizer_repeater_56d7ea7f40b56">
