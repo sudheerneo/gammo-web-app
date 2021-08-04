@@ -21,9 +21,9 @@ const handler =  async (req, res) => {
         //catching redirect 
         if(data.payment_status === 'Credit'){
           //getting payment suceess data
-          // const ggg = await axios.get(`https://test.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
-          // const fff = await ggg.data;
-          res.status(200).json(req.query)
+          const ggg = await axios.get(`https://test.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
+          const fff = await ggg.data;
+          res.status(200).json(fff)
         }
         res.status(200).json({'response' : 'currrently analyzing the issue'})
         
