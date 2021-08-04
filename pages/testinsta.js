@@ -20,9 +20,9 @@ export default function testApi() {
       amount: '2500',
       phone: '9999999999',
       buyer_name: 'John Doe',
-      redirect_url: ' https://jlumtest.loca.lt/api/instamojo/redirect/',
+      redirect_url: 'https://jlum.vercel.app/api/instamojo/redirect/',
       send_email: true,
-      webhook: ' https://jlumtest.loca.lt/api/instamojo/webhook/',
+      webhook: 'https://jlum.vercel.app/api/instamojo/webhook/',
       send_sms: true,
       email: 'foo@example.com',
       allow_repeated_payments: true
