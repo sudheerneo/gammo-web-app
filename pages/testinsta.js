@@ -21,7 +21,8 @@ export default function testApi() {
       phone: '9640405005',
       buyer_name: 'John Doe',
       send_email: true,
-      webhook: 'https://jlum.vercel.app/api/instamojo/redirect/',
+      redirect_url: 'https://jlum.vercel.app/api/instamojo/redirect/'
+      webhook: 'https://jlum.vercel.app/api/instamojo/webhook/',
       send_sms: true,
       email: 'mailtobsudheer@gmail.com',
       allow_repeated_payments: true
