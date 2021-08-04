@@ -18,13 +18,12 @@ export default function testApi() {
   const payload = {
       purpose: 'FIFA 16',
       amount: '2500',
-      phone: '9999999999',
+      phone: '9640405005',
       buyer_name: 'John Doe',
-      redirect_url: 'https://jlum.vercel.app/api/instamojo/redirect/',
       send_email: true,
       webhook: 'https://jlum.vercel.app/api/instamojo/webhook/',
       send_sms: true,
-      email: 'foo@example.com',
+      email: 'mailtobsudheer@gmail.com',
       allow_repeated_payments: true
   }
   
