@@ -21,9 +21,10 @@ const handler =  async (req, res) => {
         //catching redirect 
         if(data.payment_status === 'Credit'){
           //getting payment suceess data
-          const res = await axios.get(`https://www.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
-          const dataRec = await res.data;
-          res.status(200).json(dataRes)
+          
+          // const dataRec = await res.data;const res = await axios.get(`https://www.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
+          // res.status(200).json(dataRes)
+          res.status(200).json(data)
         }
         res.status(200).json({'response' : 'currrently analyzing the issue'})
         
@@ -37,29 +38,3 @@ const handler =  async (req, res) => {
   }
 
   export default handler;
-
-//  //firebase api 
-// export default async (req, res) => {
-//     const { id } = req.query;
-  
-//     try {
-//       if (req.method === 'PUT') {
-//         await db.collection('entries').doc(id).update({
-//           ...req.body,
-//           updated: new Date().toISOString(),
-//         });
-//       } else if (req.method === 'GET') {
-//         const doc = await db.collection('entries').doc(id).get();
-//         if (!doc.exists) {
-//           res.status(404).end();
-//         } else {
-//           res.status(200).json(doc.data());
-//         }
-//       } else if (req.method === 'DELETE') {
-//         await db.collection('entries').doc(id).delete();
-//       }
-//       res.status(200).end();
-//     } catch (e) {
-//       res.status(400).end();
-//     }
-//   }
