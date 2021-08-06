@@ -45,7 +45,7 @@ const handler =  async (req, res) => {
         const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
-        vals ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
+        doc ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
                           refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true } ) 
                         : refInsert.set({donations}, { merge: true }) && 
                           refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
