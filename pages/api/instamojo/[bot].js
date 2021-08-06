@@ -45,11 +45,11 @@ const handler =  async (req, res) => {
         const refInsert = await db.collection('users').doc(session.user.id)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
-        vals.donations ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
-                          refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true } ) 
+        vals.donations ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
+                          refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true } ) 
                         : refInsert.set({donations}, { merge: true }) && 
-                          refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
-                          refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true });
+                          refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
+                          refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true });
        
          res.status(200).json({"all tests" : "passed"})
 
@@ -124,4 +124,3 @@ const handler =  async (req, res) => {
   }
 
   export default handler;
-
