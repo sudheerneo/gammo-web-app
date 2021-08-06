@@ -40,7 +40,7 @@ const handler =  async (req, res) => {
           const result = await call.data;
 
         //firestorestarted
-        const doc = await db.collection('users').doc(session.user.email).get();
+        const doc = await db.collection('usersdata').doc(session.user.email).get();
         const vals = doc.data()
         const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
@@ -94,7 +94,7 @@ const handler =  async (req, res) => {
              "created_at":"2021-08-03T21:05:53.349487Z"
           }
        }
-        const doc = await db.collection('users').doc(session.user.email).get();
+        const doc = await db.collection('usersdata').doc(session.user.email).get();
         const vals = doc.data()
         const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
