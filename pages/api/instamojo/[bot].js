@@ -41,11 +41,11 @@ const handler =  async (req, res) => {
 
         //firestorestarted
         const doc = await db.collection('usersdata').doc(session.user.email).get();
-        const vals = doc.data()
+        //const vals = doc.data()
         const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
-        vals.donations ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
+        vals ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
                           refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true } ) 
                         : refInsert.set({donations}, { merge: true }) && 
                           refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
