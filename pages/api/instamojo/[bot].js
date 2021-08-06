@@ -1,34 +1,111 @@
 import axios from 'axios'
+import {getSession} from 'next-auth/client'
+import firebase from "firebase/app"
+import "firebase/firestore"
+
+const firebaseConfig = {
+    apiKey:  process.env.FIREBASE_apiKey,
+    authDomain:  process.env.FIREBASE_authDomain,
+    projectId:  process.env.FIREBASE_projectId,
+    storageBucket:  process.env.FIREBASE_storageBucket,
+    messagingSenderId:  process.env.FIREBASE_messagingSenderId,
+    appId:  process.env.FIREBASE_appId,
+    measurementId:  process.env.FIREBASE_measurementId
+}
+
+const db = (
+  firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
+).firestore()
+
 
 const handler =  async (req, res) => {
+    const session = await getSession({ req });
     const { bot } = req.query;
     const headers =  { 'X-Api-Key': 'test_e396650e951cdbcc3f3b2aa719b', 'X-Auth-Token' : 'test_dc5af79bfc8d3d2354274ea912e'}
-
+  
     try {
+        //create a payment request
        if (req.method === 'POST' && bot === 'cpRequest') {
         const payload = req.body.payload;
-        //create a payment request
         const given = await axios.post('https://test.instamojo.com/api/1.1/payment-requests/',  payload, { headers });
         const dataMain =  await given.data;
         res.status(200).json(dataMain)
-
-      } else if (req.method === 'GET' && bot === 'test') {
+      }
+      //catching redirect url from Instamojo
+      else if (req.method === 'GET' && bot === 'redirect') {
         const data = req.query;
-        res.status(200).json({'yup': 'wrong place'})
-        
-      } else if (req.method === 'GET' && bot === 'redirect') {
-        const data = req.query;
-        //catching redirect 
+        //getting payment suceess data
         if(data.payment_status === 'Credit'){
-          //getting payment suceess data
-          const ggg = await axios.get(`https://test.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
-          const fff = await ggg.data;
-          res.status(200).json(fff)
+          const call = await axios.get(`https://test.instamojo.com/api/1.1/payments/${data.payment_id}`, { headers }); 
+          const result = await call.data;
+
+        //firestorestarted
+        const doc = await db.collection('test').doc('9640405005').get();
+        const vals = doc.data()
+        const refInsert = await db.collection('user').doc(session.user.id)
+        const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
+
+        vals.donations ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
+                          refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true } ) 
+                        : refInsert.set({donations} )&& 
+                          refInsert.set( {donations: {lastsuccess : result}}) &&  
+                          refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}} , { merge: true });
+
+
+          res.status(200).json({"response" : "ok"})
         }
         res.status(200).json({'response' : 'currrently analyzing the issue'})
         
-      } else if (req.method === 'DELETE' ) {
-        await db.collection('entries').doc(id).delete();
+      } 
+      //firestore get
+      else if (req.method === 'GET' && bot === 'firedbget') {
+        const lastsuccess = {
+          "success":false,
+          "payment":{
+             "payment_id":"MOJO1803405N95752852",
+             "status":"Credit",
+             "currency":"INR",
+             "amount":"2500.00",
+             "buyer_name":"John Doe",
+             "buyer_phone":"+919999999999",
+             "buyer_email":"foo@example.com",
+             "shipping_address":null,
+             "shipping_city":null,
+             "shipping_state":null,
+             "shipping_zip":null,
+             "shipping_country":null,
+             "quantity":1,
+             "unit_price":"2500.00",
+             "fees":"47.50",
+             "variants":[
+                
+             ],
+             "custom_fields":{
+                
+             },
+             "affiliate_commission":"0",
+             "payment_request":"https://test.instamojo.com/api/1.1/payment-requests/39b8e3a1293d431d91f191df9767a4b2/",
+             "instrument_type":"NETBANKING",
+             "billing_instrument":"Domestic Netbanking Regular",
+             "tax_invoice_id":"",
+             "failure":null,
+             "payout":null,
+             "created_at":"2021-08-03T21:05:51.349487Z"
+          }
+       }
+       
+       
+        // res.status(200).json(vals.payment)
+      }
+      //firestore post      
+      else if (req.method === 'GET' && bot === 'firedbCreate') {        
+        const insertData = db.collection('users').doc('pyCAXvakI7uuQFHXk5yS');
+       
+          const doc = await insertData.set({
+            payments
+          }, { merge: true });
+
+        res.status(200).json({'request': 'success'})
       }
       res.status(200).end();
     } catch (e) {
@@ -37,3 +114,4 @@ const handler =  async (req, res) => {
   }
 
   export default handler;
+
