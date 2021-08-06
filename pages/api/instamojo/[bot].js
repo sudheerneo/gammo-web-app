@@ -94,16 +94,16 @@ const handler =  async (req, res) => {
              "created_at":"2021-08-03T21:05:53.349487Z"
           }
        }
-//         const doc = await db.collection('users').doc(session.user.id).get();
-//         const vals = doc.data()
-//         const refInsert = await db.collection('users').doc(session.user.id)
-//         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
+        const doc = await db.collection('users').doc(session.user.id).get();
+        const vals = doc.data()
+        const refInsert = await db.collection('users').doc(session.user.id)
+        const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
-//         vals.donations ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
-//                           refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true } ) 
-//                         : refInsert.set({donations}, { merge: true }) && 
-//                           refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
-//                           refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true });
+        vals.donations ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
+                          refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true } ) 
+                        : refInsert.set({donations}, { merge: true }) && 
+                          refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
+                          refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true });
        
          res.status(200).json({"all tests" : "passed"})
       }
