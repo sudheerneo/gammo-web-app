@@ -40,9 +40,9 @@ const handler =  async (req, res) => {
           const result = await call.data;
 
         //firestorestarted
-        const doc = await db.collection('users').doc(session.user.id).get();
+        const doc = await db.collection('users').doc(session.user.email).get();
         const vals = doc.data()
-        const refInsert = await db.collection('users').doc(session.user.id)
+        const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
         vals.donations ?  refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
@@ -94,9 +94,9 @@ const handler =  async (req, res) => {
              "created_at":"2021-08-03T21:05:53.349487Z"
           }
        }
-        const doc = await db.collection('users').doc(session.user.id).get();
+        const doc = await db.collection('users').doc(session.user.email).get();
         const vals = doc.data()
-        const refInsert = await db.collection('users').doc(session.user.id)
+        const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
         vals.donations ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
@@ -109,7 +109,7 @@ const handler =  async (req, res) => {
       }
       //firestore post      
       else if (req.method === 'GET' && bot === 'firedbCreate') {        
-        const insertData = db.collection('users').doc(session.user.id);
+        const insertData = db.collection('usersdata').doc(session.user.email);
        
           const doc = await insertData.set({ "I am": "Sudheer" }, { merge: true });
 
