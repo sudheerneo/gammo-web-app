@@ -54,6 +54,8 @@ export default NextAuth({
   // a separate secret is defined explicitly for encrypting the JWT.
   secret: process.env.SECRET,
 
+
+
   session: {
     // Use JSON Web Tokens for session instead of database sessions.
     // This option can be used with or without a database for users/accounts.
@@ -104,10 +106,25 @@ export default NextAuth({
     // async redirect(url, baseUrl) { return baseUrl },
     // async session(session, user) { return session },
     // async jwt(token, user, account, profile, isNewUser) { return token }
+    jwt: async (token, user, account, profile, isNewUser) => {
+      //  "user" parameter is the object received from "authorize"
+      //  "token" is being send below to "session" callback...
+      //  ...so we set "user" param of "token" to object from "authorize"...
+      //  ...and return it...
+      user && (token.user = user);
+      return token   // ...here
+      },
+    session: async (session, user, sessionToken) => {
+      //  "session" is current session object
+      //  below we set "user" param of "session" to value received from "jwt" callback
+      session.user = user.user;
+      return session
+     }
   },
 
-  // Events are useful for logging
+  // Events are useful for loggingyarn dev
   // https://next-auth.js.org/configuration/events
+  //this is the place where we can start custom api handling  with events like createUserr() , updateUser(), getUser
   events: {},
 
   // You can set the theme to 'light', 'dark' or use 'auto' to default to the
@@ -115,5 +132,5 @@ export default NextAuth({
   theme: 'dark',
 
   // Enable debug messages in the console if you are having problems
-  debug: true,
+  debug: false,
 })
