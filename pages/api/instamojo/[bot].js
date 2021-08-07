@@ -51,7 +51,7 @@ const handler =  async (req, res) => {
                           refInsert.update( {"donations.lastsuccess" : result}, { merge: false })  &&
                           refInsert.set( {donations: { alldonations: {[result.payment.created_at] : result}}}, { merge: true });
        
-         res.status(200).json({"all tests" : "passed"})
+         res.status(200).json({"all tests:" : "database updated"})
 
 
         }
@@ -99,13 +99,13 @@ const handler =  async (req, res) => {
         const refInsert = await db.collection('usersdata').doc(session.user.email)
         const donations = {"lastsuccess":{}, "lastfail":{},'alldonations':{}} 
 
-        vals.donations ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
+                  vals ?  refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
                           refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true } ) 
                         : refInsert.set({donations}, { merge: true }) && 
                           refInsert.update( {"donations.lastsuccess" : lastsuccess}, { merge: false })  &&
                           refInsert.set( {donations: { alldonations: {[lastsuccess.payment.created_at] : lastsuccess}}}, { merge: true });
        
-         res.status(200).json({"all tests" : "passed"})
+         res.status(200).json({"all tests" : "databases passed"})
       }
       //firestore post      
       else if (req.method === 'GET' && bot === 'firedbCreate') {        
@@ -122,7 +122,6 @@ const handler =  async (req, res) => {
   }
 
   export default handler;
-
 
 //  //firebase api 
 // export default async (req, res) => {
