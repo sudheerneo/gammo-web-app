@@ -1,4 +1,19 @@
+import {useState,useEffect} from  'react'
+import Toggle from 'react-toggle'
+
+
 export default function Donate() {
+	const [ismobile, setMobile] = useState(false)
+	const [paySwitch, setpaySwitch] = useState(false);
+	useEffect(async() =>{
+		const screenWidth = await window.innerWidth;
+		screenWidth < 768 ? setMobile(true) : setMobile(false)
+	},[]);
+	
+	const handleSubmit = async () => { 
+		
+	}
+
     return(
         
 		<div>
@@ -35,7 +50,7 @@ export default function Donate() {
 						<div className="col-md-5 col-md-offset-2">
 							<div className="card card-contact">
 								<div className="header header-raised header-primary text-center" style={{borderRadius: 14}}>
-									<h4 className="card-title">Donation Form</h4> </div>
+									<h4 className="card-title">Donation</h4> </div>
 								<div className="content">
 									<div className="pirate_forms_container widget-no" id="pirate_forms_container_default">
 										
@@ -44,39 +59,40 @@ export default function Donate() {
 											<form method="post" encType="application/x-www-form-urlencoded" className="pirate_forms  form_honeypot-on wordpress-nonce-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on pirate_forms_from_form-on">
 											
 												<div className="sib_signup_box_inside_3">
-													<div className="col-sm-4">
-														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-inr"></i></span>
-															<input type="number" className="sib-email-area form-control" name="amount" required="required" placeholder="Amount" /> 
+													<div className="col-xs-12 alert alert-info">
+														<p className="text-center">Currently our servers identifies that you are donating from India. If you want donate from abroad please change below</p>
+													</div>
+													<div className="btn-group col-xs-12 btn-group-toggle" data-toggle="buttons" role="group" aria-label="Basic example"  >
+														{/* <button type="button" className="btn btn-secondary " >I</button>
+														<button type="button" className="btn btn-secondary " >f</button> */}
+														  	<label onClick={() => {setpaySwitch(false)}} style={{width: "50%"}} className={paySwitch ? "btn btn-default" : "btn btn-primary active"}><img src="/images/india-flag-icon-64.png" style={{height: 16, width: 20}}/> INDIA</label>
+															<label onClick={() => {setpaySwitch(true)}} style={{width: "49%", color: 'white'}}  className={paySwitch ? "btn btn-primary active" : "btn btn-default"}><img src="/images/global-icon.png" style={{height: 18, width: 18}}/> GLOBAL </label>							 							
+													</div>
+													
+													<div className="col-xs-12 " style={{paddingTop: 35}}>
+														<div className="input-group"> <span className="input-group-addon"> { paySwitch ?  <i className="fa fa-usd"></i> :  <i className="fa fa-inr"></i>}</span>
+															<input type="number" className="sib-email-area form-control" style={{textAlign: 'center'}} name="amount" required="required" placeholder="Amount" /> 
 														</div>
 													</div>
-													<div className="col-sm-8">
+													{/* <div className="col-sm-12">
 														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-phone"></i></span>
 															<input type="number" className="sib-email-area form-control" name="phnumber" required="required" placeholder="Number" /> 
 														</div>
-													</div>
-													<div className="col-sm-4">
-														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-user"></i></span>
-															<input type="text" className="sib-email-area form-control" name="donatorname" required="required" placeholder="Name" /> 
-														</div>
-													</div>
-													<div className="col-sm-8">
-														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
-															<input type="email" className="sib-email-area form-control" name="email" required="required" placeholder="Email" /> 
-														</div>
-													</div>
-													<div className="col-sm-12">
+													</div> */}
+													
+													{/* <div className="col-sm-12">
 														<div className="input-group"> <span className="input-group-addon"><i className="fa fa-pencil"></i></span>
 															<textarea type="text" rows="4" cols="30" className="sib-email-area form-control" name="msg" required="required" placeholder="Write any message for us" /> 
 														</div>
-													</div>
+													</div> */}
 												</div>
 												
 												<div className="col-xs-12 form_field_wrap contact_submit_wrap">
-													<button type="submit" className=" btn btn-primary " placeholder="">Donate with <i className="_mi _before dashicons dashicons-heart" aria-hidden="true"></i></button>
+													<button onClick={() => {handleSubmit}} className=" btn btn-primary " placeholder="">Donate with <i className="_mi _before dashicons dashicons-heart" aria-hidden="true"></i></button>
 												</div>
-												<div className="col-sm-12 text-center">
+												{/* <div className="col-xs-12 alert alert-info text-center">
 													<p style={{textAlign: "center", fontSize: 14}}>And my God will supply every need of yours according to his riches in glory in Christ Jesus - Philippians 4:19</p>
-												</div>
+												</div> */}
 												<div className="pirate_forms_clearfix"></div>
 											</form>
 										</div>
