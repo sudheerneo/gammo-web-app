@@ -4,7 +4,6 @@ import Head from  'next/head';
 import Navbar from './Navbar'
 import Carousal from  './Carousal';
 
-const out = (val) => console.log(val);
 
 export default class Header extends Component  {
   constructor(){
@@ -46,7 +45,18 @@ render(){
       <link rel="stylesheet" id="font_awesome-css" href="/srcData_files/font-awesome.min(1).css" type="text/css" media="all"/>
       <link rel="stylesheet" id="fl-builder-google-fonts-d8b6cbcd8e179c5f8061d31801bcddf6-css" href="/srcData_files/css" type="text/css" media="all"/>
       <link rel='stylesheet' id='dashicons-css'  href='/srcData_files/dashicons.min.css?ver=5.7.2' type='text/css' media='all' />
-    
+
+      {/* onese ui cdn */}
+      {/* <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+      <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css" />
+      <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+     */}
+
+{/* r */}
+
+
+
+
     </Head>
           
     <header className="header">

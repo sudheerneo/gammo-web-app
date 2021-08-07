@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Link from 'next/link';
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { signin, signIn, signOut, useSession, getSession } from 'next-auth/client'
 
 const withSession = Component => props => {
 	const [session, loading] = useSession()
@@ -39,7 +39,7 @@ class Navbarclass extends Component {
     getUrl === '/contact' ? this.setState({ url: '/contact'}) : 0 ;
     getUrl === '/donate' ? this.setState({ url: '/donate'}) : 0 ;
 	getUrl === '/' ? this.setState({ url: '/'}) : 0 ;
-	
+
 
  }
 
@@ -110,7 +110,7 @@ class Navbarclass extends Component {
 							</li>
 							</>}
 							{/* if user logged in display menu*/}
-							{this.props.session && <>									
+							{this.props.session &&<>									
 							<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown"  className="dropdown-toggle user-area" aria-haspopup="true"><img style={{verticalAlign: "middle", width: 50, borderRadius: "50%", padding: 0}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"></span></a>
 								<ul role="menu" className=" dropdown-menu">
 									<p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
@@ -126,8 +126,7 @@ class Navbarclass extends Component {
 					</div>
 				</div>
 			</nav> 
-           
-		
+			
         </div>
     )
 }}
