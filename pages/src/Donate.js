@@ -59,7 +59,8 @@ export default function Donate() {
 											
 												<div className="sib_signup_box_inside_3">
 													<div className="col-xs-12 alert alert-info">
-														<p className="text-center">Currently our servers identifies that you are donating from India. If you want donate from abroad please change below</p>
+														<p className="text-center">And my God will supply every need of yours according to his riches in glory in Christ Jesus - Philippians 4:19</p>
+											
 													</div>
 													<div className="btn-group col-xs-12 btn-group-toggle" data-toggle="buttons" role="group" aria-label="Basic example"  >
 														{/* <button type="button" className="btn btn-secondary " >I</button>
