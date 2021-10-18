@@ -65,8 +65,8 @@ export default function Donate() {
 													<div className="btn-group col-xs-12 btn-group-toggle" data-toggle="buttons" role="group" aria-label="Basic example"  >
 														{/* <button type="button" className="btn btn-secondary " >I</button>
 														<button type="button" className="btn btn-secondary " >f</button> */}
-														  	<label onClick={() => {setpaySwitch(false)}} style={{width: "50%"}} className={paySwitch ? "btn btn-default" : "btn btn-primary active"}><img src="/images/india-flag-icon-64.png" style={{height: 16, width: 20}}/>{ ismobile ? null :  'INDIA'}</label>
-															<label onClick={() => {setpaySwitch(true)}} style={{width: "49%", color: 'white'}}  className={paySwitch ? "btn btn-primary active" : "btn btn-default"}><img src="/images/global-icon.png" style={{height: 18, width: 18}}/>{ ismobile ? null : 'GLOBAL' }</label>							 							
+														  	<label onClick={() => {setpaySwitch(false)}} style={{width: "50%"}} className={paySwitch ? "btn btn-default" : "btn btn-primary active"}><img src="/images/india-flag-icon-64.png" style={{height: 16, width: 20}}/>{ ismobile ? null :  ' INDIA'}</label>
+															<label onClick={() => {setpaySwitch(true)}} style={{width: "49%", color: 'white'}}  className={paySwitch ? "btn btn-primary active" : "btn btn-default"}><img src="/images/global-icon.png" style={{height: 18, width: 18}}/>{ ismobile ? null : ' GLOBAL' }</label>							 							
 													</div>
 													
 													<div className="col-xs-12 " style={{paddingTop: 35}}>
