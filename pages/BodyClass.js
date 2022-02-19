@@ -1,6 +1,6 @@
 import  { Component } from 'react';
 
-class BodyClass extends Component {
+class BodyClass extends Component { 
 
     componentDidMount() {
 

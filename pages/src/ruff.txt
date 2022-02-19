@@ -1,0 +1,820 @@
+
+<div className="container">
+  <div className="row">
+    <div className="col-lg-12">
+      <div className="subscribe-area">
+        <div className="obj"><img src="assets/images/subscribe.png" alt="image" /></div>
+        <div className="subscribe-content">
+          {/* <h2 className="title" id="test" >Invite your besties to get free Game pass</h2> <a href="#0" data-toggle="modal" data-target="#rotaionWarning">join now</a> */}
+          <p>You will get one free game entry pass to win Rs 2,000 match for each invitaion, there no limit but only for the successfull partcipation from your request will get pass surely</p>
+          <p></p>
+          <form className="subscribe-form">
+            <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Phone number or  Email"/>
+            <button type="submit">invite Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  { 
+    ismobile ? <>
+    {/* mobile view */}
+<div className="row footer-top mb-none-50">
+    <div className="mb-50" style={{ paddingLeft: '20px '}}>
+      <div className="footer-widget">
+      <h3 class="footer-widget__title">ABOUT</h3>
+            <ul class="short-links">
+              <li><a href="#0">About Us</a></li>
+              <li><a href="#0">Contact Us</a></li>
+              <li><a href="#0">Customer Reviews</a></li>
+              <li><a href="#0">Privacy Policy</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+
+        <div class="mb-50" style={{ paddingLeft: '30px '}}>
+          <div class="footer-widget">
+            <h3 class="footer-widget__title">MY ACCOUNT</h3>
+            <ul class="short-links">
+              <li><a href="#0">Manage My Account</a></li>
+              <li><a href="#0">Account Varification</a></li>
+              <li><a href="#0">Safety & Security</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+        <div class="mb-50" style={{ paddingLeft: '20px '}}>
+          <div class="footer-widget" >
+            <h3 class="footer-widget__title">HELP CENTER</h3>
+            <ul class="short-links">
+              <li><a href="#0">Help centre</a></li>
+              <li><a href="#0">FAQ</a></li>
+              <li><a href="#0">Quick Start Guide</a></li>
+              <li><a href="#0">Tutorials</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+        <div class="mb-50" style={{ paddingLeft: '30px '}}>
+          <div class="footer-widget">
+            <h3 class="footer-widget__title">LEGAL INFO</h3>
+            <ul class="short-links">
+              <li><a href="#0">Security</a></li>
+              <li><a href="#0">Terms of Service</a></li>
+              <li><a href="#0">Become Affiliate</a></li>
+              <li><a href="#0">Complaints Policy</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+    </div>
+  </div>
+  {/* mobile view end */}
+    </> : <>
+    {/* desktop view */}
+<div className="row footer-top mb-none-50">
+    <div className="col-lg-3 col-sm-6 mb-50">
+      <div className="footer-widget">
+      <h3 class="footer-widget__title">ABOUT</h3>
+            <ul class="short-links">
+              <li><a href="#0">About Us</a></li>
+              <li><a href="#0">Contact Us</a></li>
+              <li><a href="#0">Customer Reviews</a></li>
+              <li><a href="#0">Privacy Policy</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-50">
+          <div class="footer-widget">
+            <h3 class="footer-widget__title">MY ACCOUNT</h3>
+            <ul class="short-links">
+              <li><a href="#0">Manage Your Account</a></li>
+              <li><a href="#0">Account Varification</a></li>
+              <li><a href="#0">Safety & Security</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-50">
+          <div class="footer-widget">
+            <h3 class="footer-widget__title">HELP CENTER</h3>
+            <ul class="short-links">
+              <li><a href="#0">Help centre</a></li>
+              <li><a href="#0">FAQ</a></li>
+              <li><a href="#0">Quick Start Guide</a></li>
+              <li><a href="#0">Tutorials</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-50">
+          <div class="footer-widget">
+            <h3 class="footer-widget__title">LEGAL INFO</h3>
+            <ul class="short-links">
+              <li><a href="#0">Security</a></li>
+              <li><a href="#0">Terms of Service</a></li>
+              <li><a href="#0">Become Affiliate</a></li>
+              <li><a href="#0">Complaints Policy</a></li>
+            </ul>
+          </div>{/* footer-widget end */}
+    </div>
+  </div>
+  {/* desktop view end */}
+    </>
+}
+
+  <div className="row footer-bottom align-items-center">
+    <div className="col-lg-7 col-md-6 text-md-left text-center">
+      <p className="copy-right-text">All Rights Reserved By <a href="#0">Gammo</a> © 2022</p>
+    </div>
+    <div className="col-lg-5 col-md-6 mt-md-0 mt-3">
+      <ul className="social-links justify-content-md-end justify-content-center">
+        <li><a href="#0">G</a></li>
+        <li><a href="#0">A</a></li>
+        <li><a href="#0">M</a></li>
+        <li><a href="#0">M</a></li>
+        <li><a href="#0">O</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+------------------------------------------------------------------------
+
+
+
+
+
+<nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+<div className="container">
+    <div className="navbar-header">
+        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#main-navigation"> <span className="sr-only">Toggle Navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
+        <div className="title-logo-wrapper">
+            <Link href='/'><a className="navbar-brand" title="JLUM"><img src="assets/images/logo.png" /></a></Link>
+        </div>
+        <div className={ this.props.session ? 'navbar-toggle user-area' : 'navbar-toggle' } style={{listStyle: 'none'}}>
+        {
+                this.state.isMobile &&
+                <>
+                {!this.props.session && <>
+                <li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown " ><a title='Login'  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
+                <ul role="menu" className=" dropdown-menu" >
+                    <li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" style={{color: 'deeppink'}} aria-hidden="true"></i><span>Login with Google</span></a></li>
+                </ul>
+            </li>
+            </>}
+            {this.props.session && <>									
+            <li  id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
+                <ul role="menu" className=" dropdown-menu">
+                    <p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'deeppink'}} ></i><span>Dashboard</span></a></Link></li>
+                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Settings</span></a></Link></li>
+                    <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Logout</span></a></li>
+                </ul>
+            </li>
+            </>}
+                </>
+            }
+        </div>
+    </div>
+    
+    <div id="main-navigation" className="collapse navbar-collapse " >
+    <ul id="menu-e1-menu" className="nav navbar-nav navbar-right ">
+            
+            <li id="menu-item-87" className={ this.state.url === '/' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/"><a title="Home page" ><i className="_mi _before dashicons dashicons-admin-home" aria-hidden="true"> </i><span> Home</span></a></Link></li>
+            <li id="menu-item-199" className={ this.state.url === '/about' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/about"><a title="About JLUM journey" ><i className="_mi _before dashicons dashicons-pressthis" aria-hidden="true"> </i><span> About</span></a></Link></li>
+            <li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title="Sermons and other services of JLUM"  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><i className="_mi _before dashicons dashicons-dashboard" aria-hidden="true"> </i><span> Sermons</span> <span className="caret" ></span></a>
+                <ul role="menu" className=" dropdown-menu">
+                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/sermons"><a title="sermons" ><i className="_mi _before dashicons dashicons-format-status" aria-hidden="true"></i><span> Sermons</span></a></Link></li>
+                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/videos"><a title="Display toutube video content" ><i className="_mi _before dashicons dashicons-youtube" aria-hidden="true"></i><span>Videos and Live Telecasts</span></a></Link></li>
+                    <li id="menu-item-155" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><Link href="/bibble"><a title="Display bible"><i className="_mi _before dashicons dashicons-book-alt" aria-hidden="true"></i><span> Online Bibble</span></a></Link></li>
+                </ul>
+            </li>
+            <li id="menu-item-199" className={ this.state.url === '/prayer-request' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/prayer-request"><a title="ask or create prayer request" ><i className="_mi _before dashicons dashicons-groups" aria-hidden="true"> </i><span> Payer Request</span></a></Link></li>
+            <li id="menu-item-199" className={ this.state.url === '/contact' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/contact"><a title="contact details of JLUM" ><i className="_mi _before dashicons dashicons-location" aria-hidden="true"> </i><span> Contact</span></a></Link></li>
+            <li id="menu-item-199" className={ this.state.url === '/donate' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/donate"><a title="Donate to JLUM" ><i className="_mi _before dashicons dashicons-awards" aria-hidden="true"> </i><span> Donate</span></a></Link></li>
+            
+            {
+                !this.state.isMobile &&
+                <>
+                {!this.props.session && <>
+                <li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown btn btn-round btn-primary"><a title='Login'  data-toggle="dropdown" className="dropdown-toggle"   aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
+                <ul role="menu" className=" dropdown-menu">
+                    <li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" aria-hidden="true"></i><span>Login with Google</span></a></li>
+                    {/* <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="Login with username and pass" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Login with credentials</span></a></li> */}
+                </ul>
+            </li>
+            </>}
+            {/* if user logged in display menu*/}
+            {this.props.session &&<>									
+            <li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown"  className="dropdown-toggle user-area" aria-haspopup="true"><img style={{verticalAlign: "middle", width: 50, borderRadius: "50%", padding: 0}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"></span></a>
+                <ul role="menu" className=" dropdown-menu">
+                    <p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true"></i><span>Dashboard</span></a></Link></li>
+                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" aria-hidden="true"></i><span>Settings</span></a></Link></li>
+                    <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Logout</span></a></li>
+                </ul>
+            </li>
+            </>}
+                </>
+            }
+        </ul>
+    </div>
+</div>
+</nav> 
+
+
+------------navbar
+
+
+
+import { Component, useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import Head from  'next/head';
+import Navbar from './Navbar'
+import Carousal from  './Carousal';
+
+
+export default class Header extends Component  {
+  constructor(){
+    super()
+    this.state = {title: 'JLUM Nextjs Project'};
+  }
+
+  
+  componentDidMount() {
+    const url = window.location.pathname;
+    url === '/about' ? this.setState({title: 'JLUM-About'}) : 0
+    url === '/prayer-request' ? this.setState({title: 'JLUM-Prayer request'}) : 0
+    url === '/contact' ? this.setState({title: 'JLUM-Contact'}) : 0
+    url === '/donate' ? this.setState({title: 'JLUM-Donate'}) : 0
+  }
+ 
+render(){
+  return (
+    //////////////////////////////////////////////////////////////////////////
+    <div>
+   <Head>
+
+      {/* <link rel="icon" href='/images/cropped-logo-192x192.png' sizes="32x32" />
+      <link rel="icon" href='/images/cropped-logo-192x192.png' sizes="192x192" />
+      <link rel="apple-touch-icon-precomposed" href='images/cropped-logo-180x180.png' />
+      <meta name="msapplication-TileImage" content='/images/cropped-logo-270x270.png' />
+      <title>{this.state.title}</title>
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"/>
+      <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/"/>
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
+      <link rel="dns-prefetch" href="https://s.w.org/"/>
+      <script type="text/javascript" src="/srcData_files/jquery.js.download"></script>
+      <script type="text/javascript" src="/srcData_files/jquery-migrate.min.js.download"></script>
+      <link rel='stylesheet' id='foundation-icons-css'  href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?ver=1.10.5.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=1.10.5.1' type='text/css' media='all' />
+      <link rel="stylesheet" id="fl-builder-layout-156-css" href="/srcData_files/156-layout.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="pirate_forms_front_styles-css" href="/srcData_files/front.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="bootstrap-css" href="/srcData_files/bootstrap.min.css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="font_awesome-css" href="/srcData_files/font-awesome.min(1).css" type="text/css" media="all"/>
+      <link rel="stylesheet" id="fl-builder-google-fonts-d8b6cbcd8e179c5f8061d31801bcddf6-css" href="/srcData_files/css" type="text/css" media="all"/>
+      <link rel='stylesheet' id='dashicons-css'  href='/srcData_files/dashicons.min.css?ver=5.7.2' type='text/css' media='all' /> */}
+
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Gammo - Play for Skill</title>
+      <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16"/>
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="assets/css/all.min.css"/>
+      <link rel="stylesheet" href="assets/css/line-awesome.min.css"/>
+      <link rel="stylesheet" href="assets/css/nice-select.css"/>
+      <link rel="stylesheet" href="assets/css/animate.min.css"/>
+      <link rel="stylesheet" href="assets/css/lightcase.css"/>
+      <link rel="stylesheet" href="assets/css/slick.css"/>
+      <link rel="stylesheet" href="assets/css/main.css"/>
+
+      
+
+
+
+    </Head>
+          
+    {/* <header className="header"> */}
+    {/* <Navbar /> */}
+    {/* <Carousal /> */}
+   {/* </header> */}
+
+
+   <body>
+
+{/* prealoader start  */}
+<div class="preloader">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
+{/* prealoader end */}
+
+{/* scroll-to-top start */}
+<div class="scroll-to-top">
+<span class="scroll-icon">
+  <i class="las la-arrow-up"></i>
+</span>
+</div>
+{/* scroll-to-top end */}
+{/* page-wrapper start */}
+<div class="page-wrapper">
+  {/* login modal */}
+<div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-content bg-transparent">
+    <div class="modal-body">
+      <div class="account-area">
+        {/* <h3 class="title mb-4">Login to Gammo</h3> */}
+        <form class="account-form">
+          <div class="form-group">
+            {/* <label>Your Email </label> */}
+            <input type="email" name="login_email" placeholder=" Email" class="form-control"/>
+          </div>
+          <div class="form-group">
+            {/* <label>Password </label> */}
+            <input type="password" name="login_email" placeholder=" Password" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <p><a href="#0">Forgot your password?</a></p>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="cmn-btn">Sign IN</button>
+          </div>
+        </form>
+        <div class="or-devider mt-5"><span>OR</span></div>
+        <div class="text-center mt-4">
+          <a href="#0" class="google-btn mt-4 mb-3"><img src="assets/images/google.png" alt="image"/>Sign Up with Google</a>
+          {/* <p>Don't have an account? <a href="#0" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up here</a></p> */}
+        </div>
+      </div>{/* account-area end */}
+    </div>
+  </div>
+</div>
+</div>
+
+{/* Sign Up modal */}
+<div class="modal fade" id="signupModal" tabindex="1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-content bg-transparent">
+    <div class="modal-body">
+      <div class="account-area">
+        <h3 class="title mb-4">Let's get started</h3>
+        <div class="text-center mt-4">
+          <a href="#0" class="google-btn mt-4 mb-3"><img src="assets/images/google.png" alt="image"/>Sign Up with Google</a>
+        </div>
+        <div class="or-devider mt-4"><span>OR</span></div>
+        <p class="text-center mt-2 mb-4">Sign up with your work email</p>
+        <form class="account-form">
+          <div class="form-group">
+            <label>Your Email </label>
+            <input type="email" name="login_email" placeholder="Enter Your Email" class="form-control"/>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="cmn-btn">Try It Now</button>
+          </div>
+        </form>
+        <p class="text-center mt-3">Already have an account?<a href="#0" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Sign In</a></p>
+      </div>{/* account-area end */}
+    </div>
+  </div>
+</div>
+</div>
+
+{/* header-section start  */}
+<header class="header"> 
+<div class="header__bottom">
+  <div class="container">
+    <nav class="navbar navbar-expand-xl align-items-center">
+      <a class="site-logo site-title" href="index.html"><img src="assets/images/logo.png" alt="site-logo"/><span class="logo-icon"><i class="flaticon-fire"></i></span></a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="menu-toggle"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav main-menu ml-auto">
+          <li class="menu_has_children">
+            <a href="#0">Home</a>
+            <ul class="sub-menu">
+              <li><a href="index.html">Home One</a></li>
+              <li><a href="index-two.html">Home Two</a></li>
+            </ul>
+          </li>
+          <li class="menu_has_children">
+            <a href="#0">Games</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">All Games</a></li>
+              <li><a href="game-details.html">Game Details</a></li>
+            </ul>
+          </li>
+          <li class="menu_has_children">
+            <a href="#0">Blog</a>
+            <ul class="sub-menu">
+              <li><a href="blog-one.html">Blog One</a></li>
+              <li><a href="blog-two.html">Blog Two</a></li>
+              <li><a href="blog-details.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <li class="menu_has_children">
+            <a href="#0">pages</a>
+            <ul class="sub-menu">
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="#0" data-toggle="modal" data-target="#loginModal">join now</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>{/* header__bottom end */}
+</header>
+{/* header-section end  */}
+
+ {/* hero section start */}
+ {/* <section class="hero bg_img" data-background="./hero.jpg" style={{background-image: 'url("./hero.jpg")' }}> */}
+  <div class="hero__shape" bis_skin_checked="1">
+    <img src="./src/shape.png" alt="image"/>
+  </div>
+  <div class="el-1" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -5.22053, -34.4668' }}> <img src="./src/el-1.png" alt="image"/></div>
+  <div class="el-2" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -2.9003, -19.1482' }}> <img src="./src/el-2.png" alt="image"/></div>
+  <div class="el-3" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -5.80059, -38.2964' }}> <img src="./src/el-3.png" alt="image"/></div>
+  <div class="el-4" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -4.06042, -26.8075' }}> <img src="./src/el-4.png" alt="image"/></div>
+  <div class="el-5" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -6.96071, -45.9557' }}> <img src="./src/el-5.png" alt="image"/></div>
+  <div class="el-6" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -4.64047, -30.6371' }}> <img src="./src/el-6.png" alt="image"/></div>
+  <div class="el-7" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -5.22053, -34.4668' }}> <img src="./src/el-7.png" alt="image"/></div>
+  <div class="el-8" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -4.06042, -26.8075' }}> <img src="./src/el-8.png" alt="image"/></div>
+  <div class="el-9" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -5.80059, -38.2964' }}> <img src="./src/el-9.png" alt="image"/></div>
+  <div class="el-10" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -4.06042, -26.8075' }}> <img src="./src/el-10.png" alt="image"/></div>
+  <div class="el-11" bis_skin_checked="1" style= {{ transform: 'matrix(1, 0, 0, 1, -4.64047, -30.6371' }}> <img src="./src/el-11.png" alt="image"/></div>
+  <div class="container" bis_skin_checked="1">
+    <div class="row" bis_skin_checked="1">
+      <div class="col-lg-8" bis_skin_checked="1">
+        <div class="hero__content" bis_skin_checked="1">
+          <span class="hero__sub-title wow 'fadeInUp'" data-wow-duration="'0.5s'" data-wow-delay="0.3s" style={{visibility: 'visible', animationDuration: '0.5s', animationDelay: 0.3s; animation-name: ''fadeInUp''}}>GAMMO Esports</span>
+          <h2 class="hero__title wow 'fadeInUp'" data-wow-duration="'0.5s'" data-wow-delay="'0.5s'" style={{visibility: 'visible', animationDuration: '0.5s', animationDelay: ''0.5s'', animationName: ''fadeInUp''}}>Play for Skill</h2>
+          <p class="wow 'fadeInUp'" data-wow-duration="'0.5s'" data-wow-delay="0.7s" style={{visibility: 'visible'; animationDuration: '0.5s'; animationDelay: 0.7s; animation-name: 'fadeInUp';" id="test">Win & get paid instantly</p>
+          <a href="upi://pay?pa=9640405005@MAIRTEL&pn=Gammo&tn=Payment made to Merchant&mc=7211&am=9.00" class="cmn-btn wow 'fadeInUp'" data-wow-duration="'0.5s'" data-wow-delay="0.9s" style={{visibility: visible; animationDuration: '0.5s'; animationDelay: 0.9s; animation-name: 'fadeInUp';">Take me to the lobby</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* hero section end */}
+
+{/* game section start */}
+<section class="pt-120 pb-120 position-relative overflow-hidden">
+  <div class="game-el-1" data-paroller-factor="-0.1" data-paroller-type="foreground" data-paroller-direction="vertical" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/game-el-1.png" alt="image"/></div>
+  <div class="game-el-2" data-paroller-factor="-0.1" data-paroller-type="foreground" data-paroller-direction="horizontal" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/game-el-2.png" alt="image"/></div>
+  <div class="game-el-3" data-paroller-factor="0.1" data-paroller-type="foreground" data-paroller-direction="horizontal" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/game-el-3.png" alt="image"/></div>
+  <div class="game-el-4" data-paroller-factor="0.25" data-paroller-type="foreground" data-paroller-direction="vertical" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/game-el-4.png" alt="image"/></div>
+  <div class="container" bis_skin_checked="1">
+    <div class="row justify-content-center" bis_skin_checked="1">
+      <div class="col-lg-5" bis_skin_checked="1">
+        <div class="section-header text-center has--bg" bis_skin_checked="1">
+          <div class="header-image" bis_skin_checked="1"><img src="./src/header-el.png" alt="image"/></div>
+          <h2 class="section-title">Available Games</h2>
+        </div>
+      </div>
+    </div>{/* row end */}
+    <div class="row mb-none-40" bis_skin_checked="1">
+      <div class="col-lg-6 mb-40  wow 'fadeInUp'" data-wow-duration="0.3s" data-wow-delay="0.3s" bis_skin_checked="1" style={{visibility: hidden; animationDuration: 0.3s; animationDelay: 0.3s; animation-name: none;">
+        <div class="game-card" bis_skin_checked="1">
+          <div class="game-card__thumb" bis_skin_checked="1">
+            {/* <img src="./src/1.jpg" alt="image"/> */}
+            <img src="./src/bgmi.webp" alt="image"/>
+          </div>
+          <div class="game-card__content" bis_skin_checked="1">
+            <div class="game-card__details" bis_skin_checked="1">
+              <div class="game-card__info" bis_skin_checked="1">
+                <div class="thumb" bis_skin_checked="1"><img src="./src/bgmi-logo.jpg" alt="image"/></div>
+                <div class="content" bis_skin_checked="1">
+                  <h3 class="game-card__title"><a href="https://pixner.net/ophela/demo/game-details.html">BGMI</a></h3>
+                  <p>Battle Grounds Mobile India<a href="https://pixner.net/ophela/demo/index.html#0"></a></p>
+                </div>
+              </div>
+              <div class="game-card__ratings" bis_skin_checked="1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(95%) users playing...</span> 
+              </div>
+            </div>
+            <div class="game-card__action" bis_skin_checked="1">
+              <p class="mb-2"></p>
+              <a href="https://apps.apple.com/in/app/battlegrounds-mobile-india/id1526436837"><img src="./src/apple-btn.png" alt="image"/></a>
+              <a href="https://play.google.com/store/apps/details?id=com.pubg.imobile&hl=en&gl=US" ></a>
+            </div>
+            <div class="justify-content-center" style={{width: 100%; padding-top: 15px; padding-bottom: 15px; text-align: center;">
+              <a href="upi://pay?pa=9640405005@MAIRTEL&pn=Gammo&tn=Payment made to Merchant&mc=7211&am=9.00" class="cmn-btn " >Play Now for challenge</a>
+            </div>
+            
+          </div>{/* game-card__content end */}
+        </div>{/* game-card end */}
+      </div>
+      <div class="col-lg-6 mb-40  wow 'fadeInUp'" data-wow-duration="0.3s" data-wow-delay="'0.5s'" bis_skin_checked="1" style={{visibility: hidden; animationDuration: 0.3s; animationDelay: '0.5s'; animation-name: none;">
+        <div class="game-card" bis_skin_checked="1">
+          <div class="game-card__thumb" bis_skin_checked="1">
+            <img src="./src/pubg-lite.jpg" alt="image"/>
+          </div>
+          <div class="game-card__content" bis_skin_checked="1">
+            <div class="game-card__details" bis_skin_checked="1">
+              <div class="game-card__info" bis_skin_checked="1">
+                <div class="thumb" bis_skin_checked="1"><img src="./src/pubg-lite-logo.jpg" alt="image"/></div>
+                <div class="content" bis_skin_checked="1">
+                  <h3 class="game-card__title"><a href="https://pixner.net/ophela/demo/game-details.html">PUBGM LITE</a></h3>
+                  <p >Pubg Mobile Lite <a href="https://pixner.net/ophela/demo/index.html#0"></a></p>
+                </div>
+              </div>
+              <div class="game-card__ratings" bis_skin_checked="1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(60%) users playing...</span>
+              </div>
+            </div>
+            <div class="game-card__action" bis_skin_checked="1">
+              <p class="mb-2"></p>
+              <a href="https://pubg-mobile-lite.en.uptodown.com/android/download"><img src="./src/uptodown-btn.png" alt="image"/></a>
+              <a href="https://m.apkpure.com/pubg-lite-android/com.tencent.iglite" ></a>
+            </div>
+            <div class="justify-content-center" style={{width: 100%; padding-top: 15px; padding-bottom: 15px; text-align: center;">
+              <a href="upi://pay?pa=9640405005@MAIRTEL&pn=Gammo&tn=Payment made to Merchant&mc=7211&am=9.00" class="cmn-btn " >Play Now for challenge</a>
+            </div>
+            
+          </div>{/* game-card__content end */}
+        </div>{/* game-card end */}
+      </div>
+      <div class="col-lg-6 mb-40  wow 'fadeInUp'" data-wow-duration="0.3s" data-wow-delay="0.3s" bis_skin_checked="1" style={{visibility: hidden; animationDuration: 0.3s; animationDelay: 0.3s; animation-name: none;">
+        <div class="game-card" bis_skin_checked="1">
+          <div class="game-card__thumb" bis_skin_checked="1">
+            <img src="./src/cod-mobile.png" alt="image"/>
+          </div>
+          <div class="game-card__content" bis_skin_checked="1">
+            <div class="game-card__details" bis_skin_checked="1">
+              <div class="game-card__info" bis_skin_checked="1">
+                <div class="thumb" bis_skin_checked="1"><img src="./src/cod-mobile-logo.jpg" alt="image"/></div>
+                <div class="content" bis_skin_checked="1">
+                  <h3 class="game-card__title"><a href="https://pixner.net/ophela/demo/game-details.html">CODM</a></h3>
+                  <p>Call of Duty Mobile <a href="https://pixner.net/ophela/demo/index.html#0"></a></p>
+                </div>
+              </div>
+              <div class="game-card__ratings" bis_skin_checked="1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(30%) users playing...</span>
+              </div>
+            </div>
+            <div class="game-card__action" bis_skin_checked="1">
+              <p class="mb-2"></p>
+              <a href="https://apps.apple.com/us/app/call-of-duty-mobile/id1287282214"><img src="./src/apple-btn.png" alt="image"/></a>
+              <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=US" ></a>
+            </div>
+            <div class="justify-content-center" style={{width: 100%; padding-top: 15px; padding-bottom: 15px; text-align: center;">
+              <a href="upi://pay?pa=9640405005@MAIRTEL&pn=Gammo&tn=Payment made to Merchant&mc=7211&am=9.00" class="cmn-btn " >Play Now for challenge</a>
+            </div>
+            
+          </div>{/* game-card__content end */}
+        </div>{/* game-card end */}
+      </div>
+      <div class="col-lg-6 mb-40  wow 'fadeInUp'" data-wow-duration="0.3s" data-wow-delay="'0.5s'" bis_skin_checked="1" style={{visibility: hidden; animationDuration: 0.3s; animationDelay: '0.5s'; animation-name: none;">
+        <div class="game-card" bis_skin_checked="1">
+          <div class="game-card__thumb" bis_skin_checked="1">
+            <img src="./src/free-fire.jpg" alt="image"/>
+          </div>
+          <div class="game-card__content" bis_skin_checked="1">
+            <div class="game-card__details" bis_skin_checked="1">
+              <div class="game-card__info" bis_skin_checked="1">
+                <div class="thumb" bis_skin_checked="1"><img src="./src/free-fire-logo.jpg" alt="image"/></div>
+                <div class="content" bis_skin_checked="1">
+                  <h3 class="game-card__title"><a href="https://pixner.net/ophela/demo/game-details.html">Free Fire</a></h3>
+                  <p>Free fire mobile game<a href="https://pixner.net/ophela/demo/index.html#0"></a></p>
+                </div>
+              </div>
+              <div class="game-card__ratings" bis_skin_checked="1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(50%) users playing...</span>
+              </div>
+            </div>
+            <div class="game-card__action" bis_skin_checked="1">
+              <p class="mb-2"></p>
+              <a href="https://app.appsflyer.com/id1300146617?pid=OrganicA&c=mainpage_IOS"><img src="./src/apple-btn.png" alt="image"/></a>
+              <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth&referrer=af_tranid%3DW4FdviaFBH-kBI-vb8TG_Q%26pid%3DOrganicA%26c%3Dmainpage_AND" ></a>
+            </div>
+            <div class="justify-content-center" style={{width: 100%; padding-top: 15px; padding-bottom: 15px; text-align: center;">
+              <a href="upi://pay?pa=9640405005@MAIRTEL&pn=Gammo&tn=Payment made to Merchant&mc=7211&am=9.00" class="cmn-btn " >Play Now for challenge</a>
+            </div>
+            
+          </div>{/* game-card__content end */}
+        </div>{/* game-card end */}
+      </div>
+    </div>
+  </div>
+</section>
+{/* game section end */}
+
+
+{/* about section start */}
+<section class=" pt-120 pb-120 position-relative overflow-hidden">
+  <div class="about-obj-1" data-paroller-factor="-0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/about-obj-1.png" alt="image"/></div>
+  <div class="about-obj-2" data-paroller-factor="0.08" data-paroller-type="foreground" data-paroller-direction="horizontal" bis_skin_checked="1" style= {{ transform: unset; transition: transform 0.1s ease 0s; will-change: transform;"><img src="./src/about-obj-2.png" alt="image"/></div>
+  <div class="container" bis_skin_checked="1">
+    <div class="row" bis_skin_checked="1">
+      <div class="col-lg-8" bis_skin_checked="1">
+        <div class="about-content" bis_skin_checked="1">
+          <div class="section-header has--bg" bis_skin_checked="1">
+            <div class="header-image style--two" bis_skin_checked="1"><img src="./src/header-el-2.png" alt="image"/></div>
+            <h2 class="section-title">We Focus on Productivity for Skills</h2>
+          </div>
+          <p>Our main focus is to provide the best way to earn reward for your mindblowing skills for our players. We encourage players of their favourite games that are of a high quality skills in every way possible. This means that we ensure that all our tournaments are engaging, our features unique in game challenginges and captivating, stunning and precise! We don’t cut corners and do whatever is necessary to offer a memorable gameplay experience to your dream life with the prize money.</p>
+          <a href="https://pixner.net/ophela/demo/about.html" class="cmn-btn mt-5">learn more</a>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-lg-0 mt-4" bis_skin_checked="1">
+        <div class="about-thumb" bis_skin_checked="1">
+          <img src="./src/about-player.png" alt="image"  class="image-1"/>
+          <img src="./src/about-phone.png" alt="image"  class="image-2"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* about section end */}
+
+
+  {/* blog section start */}
+  <section class="pt-120 pb-90">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="section-header has--bg style--two">
+            <div class="header-image style--two"><img src="assets/images/header-el-4.png" alt="image"/></div>
+            <span class="section-sub-title">RECENT POSTS</span>
+            <h2 class="section-title">Game News</h2>
+          </div>
+          {/* <a href="blog-one.html" class="cmn-btn">View All posts</a> */}
+        </div>
+        <div class="col-lg-8 mt-lg-0 mt-5">
+          <div class="blog-slider">
+            <div class="post-card">
+              <div class="post-card__thumb">
+                <img src="assets/images/1.jpg" alt="image"/>
+              </div>
+              <div class="post-card__content">
+                <span class="date">Feb 15</span>
+                <h3 class="post-title"><a href="blog-details.html">Benefits of Gammo - for room mathes and tournaments</a></h3>
+                <div class="post-author mt-3">
+                  <div class="post-author__thumb">
+                    <img src="assets/images/author.png" alt="image"/>
+                  </div>
+                  <a href="#0" class="post-author__name">RamDevPro</a>
+                </div>
+              </div>
+            </div>{/* post-card end */}
+            <div class="post-card">
+              <div class="post-card__thumb">
+                <img src="assets/images/2.jpg" alt="image"/>
+              </div>
+              <div class="post-card__content">
+                <a href="#0" class="post-type"><i class="las la-file-alt"></i></a>
+                <span class="date">Jan 19</span>
+                <h3 class="post-title"><a href="blog-details.html">My all time best tornament app for BGMI - I won 2,000 two times</a></h3>
+                <div class="post-author mt-3">
+                  <div class="post-author__thumb">
+                    <img src="assets/images/author.png" alt="image"/>
+                  </div>
+                  <a href="#0" class="post-author__name">adihtyaGaming</a>
+                </div>
+              </div>
+            </div>{/* post-card end */}
+            <div class="post-card">
+              <div class="post-card__thumb">
+                <img src="assets/images/1.jpg" alt="image"/>
+              </div>
+              <div class="post-card__content">
+                <span class="date">Sep 15, 2020</span>
+                <h3 class="post-title"><a href="blog-details.html">Wow i got free game pass tokens</a></h3>
+                <div class="post-author mt-3">
+                  <div class="post-author__thumb">
+                    <img src="assets/images/author.png" alt="image"/>
+                  </div>
+                  <a href="#0" class="post-author__name">EnemyHunter</a>
+                </div>
+              </div>
+            </div>{/* post-card end */}
+            <div class="post-card">
+              <div class="post-card__thumb">
+                <img src="assets/images/2.jpg" alt="image"/>
+              </div>
+              <div class="post-card__content">
+                <a href="#0" class="post-type"><i class="las la-file-alt"></i></a>
+                <span class="date">Sep 15, 2020</span>
+                <h3 class="post-title"><a href="blog-details.html">Its very easy to earn if your pro holding in game</a></h3>
+                <div class="post-author mt-3">
+                  <div class="post-author__thumb">
+                    <img src="assets/images/author.png" alt="image"/>
+                  </div>
+                  <a href="#0" class="post-author__name">Andres Todd</a>
+                </div>
+              </div>
+            </div>{/* post-card end */}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {/* blog section end */}
+
+
+  {/* footer section start  */}
+<footer class="footer-section bg_img" data-background="assets/images/footer.png">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="subscribe-area">
+        <div class="obj"><img src="assets/images/subscribe.png" alt="image"/></div>
+        <div class="subscribe-content">
+          <h2 class="title">Invite your besties to get free Game pass</h2>
+          <p>You will get one free game entry pass to win Rs 2,000 match for each invitaion, there no limit but only for the successfull partcipation from your request will get pass surely</p>
+          <p></p>
+          <form class="subscribe-form">
+            <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Phone number or  Email"/>
+            <button type="submit">invite Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row footer-top mb-none-50">
+    <div class="col-lg-3 col-sm-6 mb-50">
+      <div class="footer-widget">
+        <h3 class="footer-widget__title">ABOUT</h3>
+        <ul class="short-links">
+          <li><a href="#0">About Us</a></li>
+          <li><a href="#0">Contact Us</a></li>
+          <li><a href="#0">Customer Reviews</a></li>
+          <li><a href="#0">Privacy Policy</a></li>
+        </ul>
+      </div>{/* footer-widget end */}
+    </div>
+    {/* HFGHFG */}
+    <div class="col-lg-3 col-sm-6 mb-50">
+      <div class="footer-widget">
+        <h3 class="footer-widget__title">HELP CENTER</h3>
+        <ul class="short-links">
+          <li><a href="#0">Help centre</a></li>
+          <li><a href="#0">FAQ</a></li>
+          <li><a href="#0">Quick Start Guide</a></li>
+          <li><a href="#0">Tutorials</a></li>
+        </ul>
+      </div>{/* footer-widget end */}
+    </div>
+  </div>
+  <div class="row footer-bottom align-items-center">
+    <div class="col-lg-7 col-md-6 text-md-left text-center">
+      <p class="copy-right-text">All Rights Reserved By <a href="#0">Gammo</a> © 2022</p>
+    </div>
+    <div class="col-lg-5 col-md-6 mt-md-0 mt-3">
+      <ul class="social-links justify-content-md-end justify-content-center">
+        <li><a href="#0"><i class="lab la-facebook-f"></i></a></li>
+        <li><a href="#0"><i class="lab la-twitter"></i></a></li>
+        <li><a href="#0"><i class="lab la-pinterest-p"></i></a></li>
+        <li><a href="#0"><i class="lab la-google-plus"></i></a></li>
+        <li><a href="#0"><i class="lab la-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+</div>
+
+<script data-cfasync="false" src="assets/js/email-decode.min.js"></script><script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/lightcase.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/TweenMax.min.js"></script>
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+
+
+
+
+
+   </div>
+/////////////////////////////////////////////////////////////////////////////////////////////
+  )
+}}
+

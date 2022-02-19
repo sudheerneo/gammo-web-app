@@ -49,85 +49,191 @@ class Navbarclass extends Component {
 	const {session, loading} = this.props;
   return(
         <div>
-			 <nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll">
-				<div className="container">
-					<div className="navbar-header">
-						<button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#main-navigation"> <span className="sr-only">Toggle Navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
-						<div className="title-logo-wrapper">
-							<Link href='/'><a className="navbar-brand" title="JLUM"><img src="/images/navlogo.png" /></a></Link>
-						</div>
-						<div className={ this.props.session ? 'navbar-toggle user-area' : 'navbar-toggle' } style={{listStyle: 'none'}}>
-						{
-								this.state.isMobile &&
-								<>
-								{!this.props.session && <>
-								<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown " ><a title='Login'  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
-								<ul role="menu" className=" dropdown-menu" >
-									<li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" style={{color: 'deeppink'}} aria-hidden="true"></i><span>Login with Google</span></a></li>
-								</ul>
-							</li>
-							</>}
-							{this.props.session && <>									
-							<li  id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
-								<ul role="menu" className=" dropdown-menu">
-									<p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
-									<li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'deeppink'}} ></i><span>Dashboard</span></a></Link></li>
-									<li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Settings</span></a></Link></li>
-									<li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Logout</span></a></li>
-								</ul>
-							</li>
-							</>}
-								</>
-							}
-						</div>
-					</div>
-					
-					<div id="main-navigation" className="collapse navbar-collapse " >
-					<ul id="menu-e1-menu" className="nav navbar-nav navbar-right ">
-							
-							<li id="menu-item-87" className={ this.state.url === '/' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/"><a title="Home page" ><i className="_mi _before dashicons dashicons-admin-home" aria-hidden="true"> </i><span> Home</span></a></Link></li>
-							<li id="menu-item-199" className={ this.state.url === '/about' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/about"><a title="About JLUM journey" ><i className="_mi _before dashicons dashicons-pressthis" aria-hidden="true"> </i><span> About</span></a></Link></li>
-							<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title="Sermons and other services of JLUM"  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><i className="_mi _before dashicons dashicons-dashboard" aria-hidden="true"> </i><span> Sermons</span> <span className="caret" ></span></a>
-								<ul role="menu" className=" dropdown-menu">
-									<li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/sermons"><a title="sermons" ><i className="_mi _before dashicons dashicons-format-status" aria-hidden="true"></i><span> Sermons</span></a></Link></li>
-									<li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/videos"><a title="Display toutube video content" ><i className="_mi _before dashicons dashicons-youtube" aria-hidden="true"></i><span>Videos and Live Telecasts</span></a></Link></li>
-									<li id="menu-item-155" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><Link href="/bibble"><a title="Display bible"><i className="_mi _before dashicons dashicons-book-alt" aria-hidden="true"></i><span> Online Bibble</span></a></Link></li>
-								</ul>
-							</li>
-							<li id="menu-item-199" className={ this.state.url === '/prayer-request' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/prayer-request"><a title="ask or create prayer request" ><i className="_mi _before dashicons dashicons-groups" aria-hidden="true"> </i><span> Payer Request</span></a></Link></li>
-							<li id="menu-item-199" className={ this.state.url === '/contact' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/contact"><a title="contact details of JLUM" ><i className="_mi _before dashicons dashicons-location" aria-hidden="true"> </i><span> Contact</span></a></Link></li>
-							<li id="menu-item-199" className={ this.state.url === '/donate' ?  this.state.menuClasses+'active' : this.state.menuClasses }><Link href="/donate"><a title="Donate to JLUM" ><i className="_mi _before dashicons dashicons-awards" aria-hidden="true"> </i><span> Donate</span></a></Link></li>
-							
-							{
-								!this.state.isMobile &&
-								<>
-								{!this.props.session && <>
-								<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown btn btn-round btn-primary"><a title='Login'  data-toggle="dropdown" className="dropdown-toggle"   aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
-								<ul role="menu" className=" dropdown-menu">
-									<li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" aria-hidden="true"></i><span>Login with Google</span></a></li>
-									{/* <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="Login with username and pass" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Login with credentials</span></a></li> */}
-								</ul>
-							</li>
-							</>}
-							{/* if user logged in display menu*/}
-							{this.props.session &&<>									
-							<li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown"  className="dropdown-toggle user-area" aria-haspopup="true"><img style={{verticalAlign: "middle", width: 50, borderRadius: "50%", padding: 0}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"></span></a>
-								<ul role="menu" className=" dropdown-menu">
-									<p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
-									<li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true"></i><span>Dashboard</span></a></Link></li>
-									<li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" aria-hidden="true"></i><span>Settings</span></a></Link></li>
-									<li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" aria-hidden="true"></i><span>Logout</span></a></li>
-								</ul>
-							</li>
-							</>}
-								</>
-							}
-						</ul>
-					</div>
-				</div>
-			</nav> 
+  {/* login modal */}
+<div className="modal fade" id="loginModal" tabIndex="1" role="dialog" aria-hidden="true">
+<div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div className="modal-content bg-transparent">
+    <div className="modal-body">
+      <div className="account-area">
+        <h3 className="title mb-4">Access your account</h3>
+        <form className="account-form">
+            
+          <div className="text-center mt-4">
+          <a href="#0" onClick={ () => {signIn('google')} }  className="google-btn mt-4 mb-3"><img src="assets/images/google.png" alt="image"/>Login with Google</a>
+          {/* <p>Don't have an account? <a href="#0" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up here</a></p> */}
+        </div>
+        </form>
+        <div className="or-devider mt-5"><span>OR</span></div>
+        <div className="text-center mt-4">
+          <a href="#0" onClick={() => {alert('FB SDK curently unvailable . please try with Google Login' )}} className="google-btn mt-4 mb-3"><img src="assets/images/facebook.png" style={{height: "24px", width: '48px'}} alt="image"/>Login with Facebook</a>
+          {/* <p>Don't have an account? <a href="#0" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up here</a></p> */}
+        </div>
+       
+         
+      </div>{/* account-area end */}
+    </div>
+  </div> <div className="form-group">
+            <p><a href="#0">Access your account with cloud logins securely</a></p>
+          </div>
+</div>
+</div>
+
+{/* Sign Up modal */}
+<div className="modal fade" id="signupModal" tabIndex="1" role="dialog" aria-hidden="true">
+<div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div className="modal-content bg-transparent">
+    <div className="modal-body">
+      <div className="account-area">
+        <h3 className="title mb-4">Let's get started</h3>
+        <div className="text-center mt-4">
+          <a href="#0" className="google-btn mt-4 mb-3"><img src="assets/images/google.png" alt="image"/>Sign Up with Google</a>
+        </div>
+        <div className="or-devider mt-4"><span>OR</span></div>
+        <p className="text-center mt-2 mb-4">Sign up with your work email</p>
+        <form className="account-form">
+          <div className="form-group">
+            <label>Your Email </label>
+            <input type="email" name="login_email" placeholder="Enter Your Email" className="form-control"/>
+          </div>
+          <div className="text-center">
+            <button type="submit" className="cmn-btn">Try It Now</button>
+          </div>
+        </form>
+        <p className="text-center mt-3">Already have an account?<a href="#0" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Sign In</a></p>
+      </div>{/* account-area end */}
+    </div>
+  </div>
+</div>
+</div>
+
+{/* header-section start  */}
+<header className="header"> 
+<div className="header__bottom">
+  <div className="container">
+    <nav className="navbar navbar-expand-xl align-items-center">
+    <Link href='/'><a className="site-logo site-title" ><img src="assets/images/logo.png" alt="site-logo"/><span className="logo-icon"><i className="flaticon-fire"></i></span></a></Link>
+
+
+{/* */}
+
+<div className=" ml-auto nav-right" style={{listStyle: 'none', paddingRight: '15px'}}>
+        {
+                this.state.isMobile &&
+                <>
+                {!this.props.session && <>
+                <li className="menu_has_children" ><a style={{backgroundColor: 'transparent'}} title='Login'  data-toggle="dropdown" className="" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
+                <ul role="menu" className="sub-menu dropdown-menu" style={{ textAlign: 'center',  left: 'auto', right: '0', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
+                    <li onClick={ () => {signIn('google')} } ><a style={{backgroundColor: 'transparent'}} title="Login with google" ><span>Login with </span> <i className="_mi _before dashicons dashicons-google" style={{color: 'skyblue'}}  aria-hidden="true"></i></a></li>
+                    <li onClick={ () => {signIn('google')} } ><a style={{backgroundColor: 'transparent'}} title="Login with facebook" ><span>Login with </span> <i className="_mi _before dashicons dashicons-facebook" style={{color: 'blue'}}  aria-hidden="true"></i></a></li>
+                </ul>
+            </li>
+            </>}
+            {this.props.session && <>									
+            <li ><a style={{backgroundColor: 'transparent'}} title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
+                <ul role="menu" className=" dropdown-menu"  style={{ textAlign: 'left',  left: 'auto', right: '0', padding: '10px', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
+                    <p >Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+                    <li><Link href="/dashboard"><a style={{backgroundColor: 'transparent'}} title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'white'}} ></i> <span>Dashboard</span></a></Link></li>
+                    <li><Link href="/settings"><a style={{backgroundColor: 'transparent'}} title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'white'}}  aria-hidden="true"></i> <span>Settings</span></a></Link></li>
+                    <li><a style={{backgroundColor: 'transparent'}} title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'white'}}  aria-hidden="true"></i> <span>Logout</span></a></li>
+                </ul>
+            </li>
+            </>}</>}
+        </div>
+    
+{/*  */}
+
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="menu-toggle"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav main-menu ml-auto">
+          <li className="menu_has_children">
+            <a href="#0">Home</a>
+            <ul className="sub-menu">
+              <li><a href="index.html">Home One</a></li>
+              <li><a href="index-two.html">Home Two</a></li>
+            </ul>
+          </li>
+          <li className="menu_has_children">
+            <a href="#0">Games</a>
+            <ul className="sub-menu">
+              <li><a href="games.html">All Games</a></li>
+              <li><a href="game-details.html">Game Details</a></li>
+            </ul>
+          </li>
+          <li className="menu_has_children">
+            <a href="#0">Blog</a>
+            <ul className="sub-menu">
+              <li><a href="blog-one.html">Blog One</a></li>
+              <li><a href="blog-two.html">Blog Two</a></li>
+              <li><a href="blog-details.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <li className="menu_has_children">
+            <a href="#0">pages</a>
+            <ul className="sub-menu">
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        <div className="nav-right">
+        {!this.state.isMobile &&  <>
+        {!this.props.session && <>
+          {/* <a onClick={ () => {signIn('google')} }  >Access your Account</a> */}
+
+          <a href="#0" data-toggle="modal" data-target="#loginModal">Access Your Account</a>
+          </>}
+          {this.props.session && <>		
+            <div className=" ml-auto" style={{listStyle: 'none', paddingRight: '15px'}}>							
+            <li ><a style={{backgroundColor: 'transparent'}} title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
+                <ul role="menu" className=" dropdown-menu"  style={{ textAlign: 'left',  left: 'auto', right: '0', padding: '10px', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
+                    <p style={{color: 'white'}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+                    <li><Link href="/dashboard"><a style={{backgroundColor: 'transparent'}} title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'white'}} ></i> <span>Dashboard</span></a></Link></li>
+                    <li><Link href="/settings"><a style={{backgroundColor: 'transparent'}} title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'white'}}  aria-hidden="true"></i> <span>Settings</span></a></Link></li>
+                    <li><a style={{backgroundColor: 'transparent'}} title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'white'}}  aria-hidden="true"></i> <span>Logout</span></a></li>
+                </ul>
+            </li>
+            </div>
+            </>}</>}
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>{/* header__bottom end */}
+</header>
+{/* header-section end  */}
+
+{/* {!this.props.session && 
+     <>
+     <li id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown " ><a title='Login'  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
+         <ul role="menu" className=" dropdown-menu" >
+             <li onClick={ () => {signIn('google')} } id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Login with Facebook" ><i className="_mi _before dashicons dashicons-google" style={{color: 'deeppink'}} aria-hidden="true"></i><span>Login with Google</span></a></li>
+         </ul>
+     </li>
+   </>     
+}  
+{this.props.session && <>									
+            <li  id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
+                <ul role="menu" className=" dropdown-menu">
+                    <p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
+                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'deeppink'}} ></i><span>Dashboard</span></a></Link></li>
+                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Settings</span></a></Link></li>
+                    <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Logout</span></a></li>
+                </ul>
+            </li>
+            </>}
+
+
+
+*/}
+
+
+
 			
         </div>
+
+		
     )
 }}
 

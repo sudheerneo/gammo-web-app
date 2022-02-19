@@ -1,5 +1,5 @@
 {
-  "name": "jlumnextjs",
+  "name": "gammowebapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,13 +18,13 @@
     "instamojo-nodejs": "0.0.5",
     "jquery": "^3.6.0",
     "mysql": "^2.18.1",
-    "next": "^10.0.0",
+    "next": "^10.2.3",
     "next-auth": "^3.27.3",
     "next-images": "^1.8.1",
     "nodemailer-smtp-transport": "^2.7.4",
-    "react": "17.0.1",
+    "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
-    "react-dom": "17.0.1",
+    "react-dom": "^17.0.1",
     "swr": "^0.5.6"
   }
 }
