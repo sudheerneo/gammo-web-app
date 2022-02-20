@@ -129,7 +129,7 @@ class Navbarclass extends Component {
             </li>
             </>}
             {this.props.session && <>									
-            <li ><a style={{backgroundColor: 'transparent'}} title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
+            <li ><a style={{backgroundColor: 'transparent'}} title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 5, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
                 <ul role="menu" className="nav-right dropdown-menu"  style={{ textAlign: 'left',  left: 'auto', right: '0', padding: '10px', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
                     <p >Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
                     <li><Link href="/dashboard"><a style={{backgroundColor: 'transparent'}} title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'white'}} ></i> <span>Dashboard</span></a></Link></li>
