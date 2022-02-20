@@ -116,13 +116,13 @@ class Navbarclass extends Component {
 
 {/* */}
 
-<div className=" ml-auto nav-right" style={{listStyle: 'none', paddingRight: '15px'}}>
+<div className=" ml-auto" style={{listStyle: 'none', paddingRight: '15px'}}>
         {
                 this.state.isMobile &&
                 <>
                 {!this.props.session && <>
                 <li className="menu_has_children" ><a style={{backgroundColor: 'transparent'}} title='Login'  data-toggle="dropdown" className="" aria-haspopup="true"><span ><i className="_mi _before dashicons dashicons-migrate" aria-hidden="true"></i></span></a>
-                <ul role="menu" className="sub-menu dropdown-menu" style={{ textAlign: 'center',  left: 'auto', right: '0', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
+                <ul role="menu" className="nav-right sub-menu dropdown-menu" style={{ textAlign: 'center',  left: 'auto', right: '0', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
                     <li onClick={ () => {signIn('google')} } ><a style={{backgroundColor: 'transparent'}} title="Login with google" ><span>Login with </span> <i className="_mi _before dashicons dashicons-google" style={{color: 'skyblue'}}  aria-hidden="true"></i></a></li>
                     <li onClick={ () => {signIn('google')} } ><a style={{backgroundColor: 'transparent'}} title="Login with facebook" ><span>Login with </span> <i className="_mi _before dashicons dashicons-facebook" style={{color: 'blue'}}  aria-hidden="true"></i></a></li>
                 </ul>
@@ -130,7 +130,7 @@ class Navbarclass extends Component {
             </>}
             {this.props.session && <>									
             <li ><a style={{backgroundColor: 'transparent'}} title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
-                <ul role="menu" className=" dropdown-menu"  style={{ textAlign: 'left',  left: 'auto', right: '0', padding: '10px', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
+                <ul role="menu" className="nav-right dropdown-menu"  style={{ textAlign: 'left',  left: 'auto', right: '0', padding: '10px', backgroundImage: '-webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%)'}}>
                     <p >Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
                     <li><Link href="/dashboard"><a style={{backgroundColor: 'transparent'}} title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'white'}} ></i> <span>Dashboard</span></a></Link></li>
                     <li><Link href="/settings"><a style={{backgroundColor: 'transparent'}} title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'white'}}  aria-hidden="true"></i> <span>Settings</span></a></Link></li>
