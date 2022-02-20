@@ -5,8 +5,10 @@ user-area {
 	margin-bottom: 0px !important;
 	
  }
+@media only screen and (max-width: 400px) {
 body {
     -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
     zoom: 0.8; /* Other non-webkit browsers */
     zoom: 80%; /* Webkit browsers */
+}
 }
