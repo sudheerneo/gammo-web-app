@@ -702,7 +702,7 @@ export default function Homepage() {
                         >
                             <div className="about-thumb" bis_skin_checked="1">
                                 <img
-                                    src="./src/about-player.png"
+                                    src="./src/about-player1.png"
                                     alt="imagefilled"
                                     className="image-1"
                                 />

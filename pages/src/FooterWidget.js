@@ -95,7 +95,7 @@ export default function FooterWidget() {
                             <div className="subscribe-area">
                                 <div className="obj">
                                     <img
-                                        src="assets/images/subscribe.png"
+                                        src="assets/images/kind.png"
                                         alt="image"
                                     />
                                 </div>
