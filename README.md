@@ -1,9 +1,1 @@
-
-## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_badge.svg)](https://repography.com)
-[![Timeline graph](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_timeline.svg)](https://github.com/sudheerneo/gammo-web-app/commits)
-[![Issue status graph](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_issues.svg)](https://github.com/sudheerneo/gammo-web-app/issues)
-[![Pull request status graph](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_prs.svg)](https://github.com/sudheerneo/gammo-web-app/pulls)
-[![Trending topics](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_words.svg)](https://github.com/sudheerneo/gammo-web-app/commits)
-[![Top contributors](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_users.svg)](https://github.com/sudheerneo/gammo-web-app/graphs/contributors)
-[![Activity map](https://images.repography.com/35428199/sudheerneo/gammo-web-app/recent-activity/H1gAJ9CatP00jqqWBZhEPHmlGmm-FzLN-ZE6YWdMzxw/kqSoyeV2uVq0nYDjI9Ax6W_J2ISXDcCLSu1TvXBhif0_map.svg)](https://github.com/sudheerneo/gammo-web-app/commits)
-
+# gammo-web-app react 

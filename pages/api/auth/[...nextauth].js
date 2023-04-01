@@ -1,32 +1,72 @@
-import NextAuth from "next-auth"
-import Providers from "next-auth/providers"
-import { FirebaseAdapter } from "@next-auth/firebase-adapter"
-import firebase from "firebase/app"
-import "firebase/firestore"
+import NextAuth from "next-auth";
+import Providers from "next-auth/providers";
+import { FirebaseAdapter } from "@next-auth/firebase-adapter";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey:  process.env.FIREBASE_apiKey,
-    authDomain:  process.env.FIREBASE_authDomain,
-    projectId:  process.env.FIREBASE_projectId,
-    storageBucket:  process.env.FIREBASE_storageBucket,
-    messagingSenderId:  process.env.FIREBASE_messagingSenderId,
-    appId:  process.env.FIREBASE_appId,
-    measurementId:  process.env.FIREBASE_measurementId
-}
+  apiKey: process.env.FIREBASE_apiKey,
+  authDomain: process.env.FIREBASE_authDomain,
+  projectId: process.env.FIREBASE_projectId,
+  storageBucket: process.env.FIREBASE_storageBucket,
+  messagingSenderId: process.env.FIREBASE_messagingSenderId,
+  appId: process.env.FIREBASE_appId,
+  measurementId: process.env.FIREBASE_measurementId
+};
 
 const firestore = (
   firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
-).firestore()
+).firestore();
 
+//refresh auth token
+async function refreshAccessToken(token) {
+  try {
+    const url =
+      "https://oauth2.googleapis.com/token?" +
+      new URLSearchParams({
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_secret: process.env.GOOGLE_CLIENT_SECRET,
+        grant_type: "refresh_token",
+        refresh_token: token.refreshToken
+      });
+
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: "POST"
+    });
+
+    const refreshedTokens = await response.json();
+
+    if (!response.ok) {
+      throw refreshedTokens;
+    }
+
+    return {
+      ...token,
+      accessToken: refreshedTokens.access_token,
+      accessTokenExpires: Date.now() + refreshedTokens.expires_in * 1000,
+      refreshToken: refreshedTokens.refresh_token ?? token.refreshToken // Fall back to old refresh token
+    };
+  } catch (error) {
+    console.log(error);
+
+    return {
+      ...token,
+      error: "RefreshAccessTokenError"
+    };
+  }
+}
+//end refresh token code
 
 export default NextAuth({
   providers: [
-    
-   Providers.Google({
-    clientId: process.env.GOOGLE_ID,
-    clientSecret: process.env.GOOGLE_SECRET,
-  }),
-    
+    Providers.Google({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET
+    })
+
     // Providers.Email({
     //   server: {
     //     host: process.env.EMAIL_SERVER_HOST,
@@ -39,7 +79,7 @@ export default NextAuth({
     //   from: process.env.EMAIL_FROM
     // }),
   ],
-  
+
   adapter: FirebaseAdapter(firestore),
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases
@@ -54,17 +94,13 @@ export default NextAuth({
   // a separate secret is defined explicitly for encrypting the JWT.
   secret: process.env.SECRET,
 
-
-
   session: {
     // Use JSON Web Tokens for session instead of database sessions.
     // This option can be used with or without a database for users/accounts.
     // Note: `jwt` is automatically set to `true` if no database is specified.
-    jwt: true,
-
+    jwt: true
     // Seconds - How long until an idle session expires and is no longer valid.
     // maxAge: 30 * 24 * 60 * 60, // 30 days
-
     // Seconds - Throttle how frequently to write to database to extend a session.
     // Use it to limit write operations. Set to 0 to always update the database.
     // Note: This option is ignored if using JSON Web Tokens
@@ -106,20 +142,46 @@ export default NextAuth({
     // async redirect(url, baseUrl) { return baseUrl },
     // async session(session, user) { return session },
     // async jwt(token, user, account, profile, isNewUser) { return token }
-    jwt: async (token, user, account, profile, isNewUser) => {
-      //  "user" parameter is the object received from "authorize"
-      //  "token" is being send below to "session" callback...
-      //  ...so we set "user" param of "token" to object from "authorize"...
-      //  ...and return it...
-      user && (token.user = user);
-      return token   // ...here
-      },
-    session: async (session, user, sessionToken) => {
-      //  "session" is current session object
-      //  below we set "user" param of "session" to value received from "jwt" callback
-      session.user = user.user;
-      return session
-     }
+
+    //old code start
+    // jwt: async (token, user, account, profile, isNewUser) => {
+
+    //   user && (token.user = user);
+    //   return token; // ...here
+    // },
+    // session: async (session, user, sessionToken) => {
+    //   session.user = user.user;
+    //   return session;
+    //old code end
+
+    //new start
+    async jwt({ token, user, account }) {
+      // Initial sign in
+      if (account && user) {
+        return {
+          accessToken: account.access_token,
+          accessTokenExpires: Date.now() + account.expires_in * 1000,
+          refreshToken: account.refresh_token,
+          user
+        };
+      }
+
+      // Return previous token if the access token has not expired yet
+      if (Date.now() < token.accessTokenExpires) {
+        return token;
+      }
+
+      // Access token has expired, try to update it
+      return refreshAccessToken(token);
+    },
+    async session({ session, token }) {
+      session.user = token.user;
+      session.accessToken = token.accessToken;
+      session.error = token.error;
+
+      return session;
+      //new code ends
+    }
   },
 
   // Events are useful for loggingyarn dev
@@ -129,8 +191,8 @@ export default NextAuth({
 
   // You can set the theme to 'light', 'dark' or use 'auto' to default to the
   // whatever prefers-color-scheme is set to in the browser. Default is 'auto'
-  theme: 'dark',
+  theme: "dark",
 
   // Enable debug messages in the console if you are having problems
-  debug: false,
-})
+  debug: true
+});

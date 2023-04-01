@@ -13,7 +13,6 @@
     "@next-auth/firebase-adapter": "^0.1.2",
     "@prisma/client": "^2.16.1",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.1",
     "firebase": "^8.8.0",
     "instamojo-nodejs": "0.0.5",
     "jquery": "^3.6.0",
