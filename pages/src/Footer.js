@@ -36,7 +36,7 @@ export default function Footer() {
                         <div className="col-lg-7 col-md-6 text-md-left text-center">
                             <p className="copy-right-text">
                                 All Rights Reserved By <a href="#0">Gammo</a> ©{" "}
-                                {new Date().getFullYear}
+                                {new Date().getFullYear()}
                             </p>
                         </div>
                         <div className="col-lg-5 col-md-6 mt-md-0 mt-3">
