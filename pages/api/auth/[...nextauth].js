@@ -1,8 +1,13 @@
 import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+// import Providers from "next-auth/providers";
+import GoogleProvider from "next-auth/providers/google";
+
 import { FirebaseAdapter } from "@next-auth/firebase-adapter";
-import firebase from "firebase/app";
-import "firebase/firestore";
+// import firebase from "firebase/app";
+// import "firebase/firestore";
+
+import { initializeApp, getApps } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_apiKey,
@@ -14,9 +19,12 @@ const firebaseConfig = {
   measurementId: process.env.FIREBASE_measurementId
 };
 
-const firestore = (
-  firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
-).firestore();
+// const firestore = (
+//   firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
+// ).firestore();
+
+const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
 //refresh auth token
 async function refreshAccessToken(token) {
@@ -61,11 +69,18 @@ async function refreshAccessToken(token) {
 //end refresh token code
 
 export default NextAuth({
-  providers: [
-    Providers.Google({
+  // providers: [
+  //   Providers.Google({
+  //     clientId: process.env.GOOGLE_ID,
+  //     clientSecret: process.env.GOOGLE_SECRET
+  //   })
+
+      providers: [
+    GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET
     })
+  ],
 
     // Providers.Email({
     //   server: {
@@ -78,7 +93,7 @@ export default NextAuth({
     //   },
     //   from: process.env.EMAIL_FROM
     // }),
-  ],
+  
 
   adapter: FirebaseAdapter(firestore),
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.

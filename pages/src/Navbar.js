@@ -3,14 +3,14 @@ import Link from "next/link";
 import $ from "jquery";
 import { useEffect } from "react";
 // import "../../public/js/app.js";
+
+
 import {
-    signin,
-    signIn,
-    signOut,
-    useSession,
-    getSession,
-    getCsrfToken,
-} from "next-auth/client";
+  signIn,
+  signOut,
+  useSession,
+} from "next-auth/react";
+
 
 const withSession = (Component) => (props) => {
     // const [session, loading] = useSession();
@@ -268,7 +268,7 @@ class Navbarclass extends Component {
                             }
                         >
                             <nav className="navbar navbar-expand-xl align-items-center">
-                                <Link href="/" passHref prefetch={false}>
+                                <Link href="/" passHref prefetch={false} legacyBehavior>
                                     <a className="site-logo site-title">
                                         <img
                                             src="assets/images/logo.png"
@@ -470,7 +470,8 @@ class Navbarclass extends Component {
                                                             <li>
                                                                 <Link
                                                                     href="/dashboard"
-                                                                    passHref
+                                                                    passHref 
+                                                                    legacyBehavior
                                                                 >
                                                                     <a
                                                                         style={{
@@ -495,7 +496,8 @@ class Navbarclass extends Component {
                                                             <li>
                                                                 <Link
                                                                     href="/settings"
-                                                                    passHref
+                                                                    passHref 
+                                                                    legacyBehavior
                                                                 >
                                                                     <a
                                                                         style={{
@@ -584,7 +586,8 @@ class Navbarclass extends Component {
                                                 <li>
                                                     <Link
                                                         href="/lobby"
-                                                        prefetch={false}
+                                                        prefetch={false} 
+                                                        legacyBehavior
                                                     >
                                                         <a>2K LOBBY</a>
                                                     </Link>
@@ -839,7 +842,8 @@ class Navbarclass extends Component {
                                                                     <li>
                                                                         <Link
                                                                             href="/dashboard"
-                                                                            passHref
+                                                                            passHref 
+                                                                            legacyBehavior
                                                                         >
                                                                             <a
                                                                                 style={{
@@ -864,7 +868,7 @@ class Navbarclass extends Component {
                                                                     <li>
                                                                         <Link
                                                                             href="/settings"
-                                                                            passHref
+                                                                            passHref legacyBehavior
                                                                         >
                                                                             <a
                                                                                 style={{
@@ -938,9 +942,9 @@ class Navbarclass extends Component {
             <li  id="menu-item-164" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164 dropdown"><a title={this.props.session.user.name || this.props.session.user.email}  data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"><img className="_mi _before dashicons dashicons-admin-network"  style={{verticalAlign: "middle", width: 50, height: 50, padding: 0, borderRadius: "50%"}} src={this.props.session.user.image} alt={this.props.session.user.name} /> <span className="caret"  ></span></a>
                 <ul role="menu" className=" dropdown-menu">
                     <p style={{color: "black", paddingLeft: 20}}>Hello <i className="_mi _before dashicons dashicons-reddit" aria-hidden="true"> </i><br /><strong>{this.props.session.user.name || this.props.session.user.email}</strong></p>
-                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard"><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'deeppink'}} ></i><span>Dashboard</span></a></Link></li>
-                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings"><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Settings</span></a></Link></li>
-                    <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Logout</span></a></li>
+                    <li id="menu-item-144" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><Link href="/dashboard" legacyBehavior><a title="Show dashboard" ><i className="_mi _before dashicons dashicons-art" aria-hidden="true" style={{color: 'deeppink'}} ></i><span>Dashboard</span></a></Link></li>
+                    <li id="menu-item-120" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><Link href="/settings" legacyBehavior><a title="Display and manipulate settings" ><i className="_mi _before dashicons dashicons-admin-generic" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Settings</span></a></Link></li>
+                    <li id="menu-item-155" role="button"  className=" menu-item menu-item-type-post_type menu-item-object-page menu-item-155" legacyBehavior><a title="logout from your account" onClick={signOut}><i className="_mi _before dashicons dashicons-privacy" style={{color: 'deeppink'}}  aria-hidden="true"></i><span>Logout</span></a></li>
                 </ul>
             </li>
             </>}

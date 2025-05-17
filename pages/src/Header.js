@@ -25,13 +25,13 @@ export default class Header extends Component {
       //////////////////////////////////////////////////////////////////////////
       <div>
         <Head>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <meta name="title" content="Gammo | Demo Project | Developed by Sudheer Neo">
-	        <meta name="description" content="Play for Skill | E - Sports | Unlock your earning potential with your skills! Victory means instant payment, so let your strategy and average skills take you to the top. Level up your productivity and become a true gamer! Join us today and let's conquer the esports world together!">
+          <meta name="title" content="Gammo | Demo Project | Developed by Sudheer Neo"/>
+	        <meta name="description" content="Play for Skill | E - Sports | Unlock your earning potential with your skills! Victory means instant payment, so let your strategy and average skills take you to the top. Level up your productivity and become a true gamer! Join us today and let's conquer the esports world together!"/>
 	
           {/* <title>{this.state.title}</title> */}
           <title>Gammo | Demo Project | Developed by Sudheer Neo</title>

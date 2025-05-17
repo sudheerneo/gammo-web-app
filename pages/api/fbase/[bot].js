@@ -1,5 +1,6 @@
 import axios from "axios";
-import { getSession } from "next-auth/client";
+import { getSession, signIn, signOut } from "next-auth/react";
+
 import firebase from "firebase/app";
 import "firebase/firestore";
 

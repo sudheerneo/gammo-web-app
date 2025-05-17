@@ -1,4 +1,5 @@
-import { getProviders, signIn } from 'next-auth/client';
+import { getSession, signIn, signOut } from "next-auth/react";
+
 import BodyClass from './BodyClass';
 import Header from './src/Header';
 import Footer from './src/Footer';

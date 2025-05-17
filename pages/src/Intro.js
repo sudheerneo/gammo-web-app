@@ -33,10 +33,10 @@ useEffect(()=>{
 												<p style={{textAlign: "center"}}> </p>
 												<p style={{textAlign: 'justify'}}>Bro. <strong>D.Vijay Rama Rao</strong> was a young man who started JLUM journey when he was in the city of Hyderabad in India from last 10 plus years. Vijay Ramarao was probably the person who led servant to the Lord (I Tim. 1:2; II Tim. 1:2; I Cor. 4:17), In his life journey he visited the churches around india and ministered there for some time. God can do miracles in our lives in the same manner god made him as his servant. He was very happy with his responsibilities </p>
 												
-												<Link href='/about'>
+												<Link href='/about' legacyBehavior>
                                                   <p style={{ cursor: 'pointer', textAlign: "center", paddingTop: isMobile ?  30 : 50 }}><strong>want to know more about</strong></p>
 												</Link>
-												<Link href='/about'>
+												<Link href='/about'  legacyBehavior>
 												  <p style={{ cursor: 'pointer', textAlign: "center"}}><strong>Bro D. Vijay Rama Rao</strong></p>
                                               	</Link>	
 

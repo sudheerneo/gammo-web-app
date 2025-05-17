@@ -1,13 +1,15 @@
 import Link from 'next/link'
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { useSession, signIn, signOut } from "next-auth/react";
+
 import styles from './header.module.css'
 
 // The approach used in this component shows how to built a sign in and sign out
 // component that works on pages which support both client and server side
 // rendering, and avoids any flash incorrect content on initial page load.
 export default function Header () {
-  const [ session, loading ] = useSession()
-  
+  const { data: session, status } = useSession();
+  const loading = status === 'loading';
+
   return (
     <header>
       <noscript>
@@ -47,15 +49,17 @@ export default function Header () {
           </>}
         </p>
       </div>
-      <nav>
-        <ul className={styles.navItems}>
-          <li className={styles.navItem}><Link href="/"><a>Home</a></Link></li>
-          <li className={styles.navItem}><Link href="/client"><a>Client</a></Link></li>
-          <li className={styles.navItem}><Link href="/server"><a>Server</a></Link></li>
-          <li className={styles.navItem}><Link href="/protected"><a>Protected</a></Link></li>
-          <li className={styles.navItem}><Link href="/api-example"><a>API</a></Link></li>
-        </ul>
-      </nav>
+     <nav>
+  <ul className={styles.navItems}>
+          <li className={styles.navItem}><Link href="/" legacyBehavior><a>Home</a></Link></li>
+          <li className={styles.navItem}><Link href="/client" legacyBehavior><a>Client</a></Link></li>
+          <li className={styles.navItem}><Link href="/server" legacyBehavior><a>Server</a></Link></li>
+          <li className={styles.navItem}><Link href="/protected" legacyBehavior><a>Protected</a></Link></li>
+          <li className={styles.navItem}><Link href="/api-example" legacyBehavior><a>API</a></Link></li>
+  </ul>
+</nav>
+
     </header>
   )
 }
+
