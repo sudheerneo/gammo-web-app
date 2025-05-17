@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_storageBucket,
   messagingSenderId: process.env.FIREBASE_messagingSenderId,
   appId: process.env.FIREBASE_appId,
-  measurementId: process.env.FIREBASE_measurementId
+  measurementId: process.env.FIREBASE_measurementId,
 };
 
 const db = (
@@ -23,7 +23,7 @@ const handler = async (req, res) => {
   const { bot } = req.query;
   const headers = {
     "X-Api-Key": "test_e396650e951cdbcc3f3b2aa719b",
-    "X-Auth-Token": "test_dc5af79bfc8d3d2354274ea912e"
+    "X-Auth-Token": "test_dc5af79bfc8d3d2354274ea912e",
   };
 
   try {
@@ -68,8 +68,8 @@ const handler = async (req, res) => {
             refInsert.set(
               {
                 donations: {
-                  alldonations: { [result.payment.created_at]: result }
-                }
+                  alldonations: { [result.payment.created_at]: result },
+                },
               },
               { merge: true }
             )
@@ -81,8 +81,8 @@ const handler = async (req, res) => {
             refInsert.set(
               {
                 donations: {
-                  alldonations: { [result.payment.created_at]: result }
-                }
+                  alldonations: { [result.payment.created_at]: result },
+                },
               },
               { merge: true }
             );
@@ -121,8 +121,8 @@ const handler = async (req, res) => {
           tax_invoice_id: "",
           failure: null,
           payout: null,
-          created_at: "2021-08-03T21:05:53.349487Z"
-        }
+          created_at: "2021-08-03T21:05:53.349487Z",
+        },
       };
       const doc = await db
         .collection("usersdata")
@@ -142,8 +142,8 @@ const handler = async (req, res) => {
           refInsert.set(
             {
               donations: {
-                alldonations: { [lastsuccess.payment.created_at]: lastsuccess }
-              }
+                alldonations: { [lastsuccess.payment.created_at]: lastsuccess },
+              },
             },
             { merge: true }
           )
@@ -155,8 +155,8 @@ const handler = async (req, res) => {
           refInsert.set(
             {
               donations: {
-                alldonations: { [lastsuccess.payment.created_at]: lastsuccess }
-              }
+                alldonations: { [lastsuccess.payment.created_at]: lastsuccess },
+              },
             },
             { merge: true }
           );

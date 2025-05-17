@@ -1,10 +1,6 @@
 import NextAuth from "next-auth";
-// import Providers from "next-auth/providers";
 import GoogleProvider from "next-auth/providers/google";
-
-import { FirebaseAdapter } from "@next-auth/firebase-adapter";
-// import firebase from "firebase/app";
-// import "firebase/firestore";
+import { FirestoreAdapter } from "@next-auth/firebase-adapter";
 
 import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -16,12 +12,8 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_storageBucket,
   messagingSenderId: process.env.FIREBASE_messagingSenderId,
   appId: process.env.FIREBASE_appId,
-  measurementId: process.env.FIREBASE_measurementId
+  measurementId: process.env.FIREBASE_measurementId,
 };
-
-// const firestore = (
-//   firebase.apps[0] ?? firebase.initializeApp(firebaseConfig)
-// ).firestore();
 
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
@@ -35,14 +27,14 @@ async function refreshAccessToken(token) {
         client_id: process.env.GOOGLE_CLIENT_ID,
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
         grant_type: "refresh_token",
-        refresh_token: token.refreshToken
+        refresh_token: token.refreshToken,
       });
 
     const response = await fetch(url, {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      method: "POST"
+      method: "POST",
     });
 
     const refreshedTokens = await response.json();
@@ -55,32 +47,25 @@ async function refreshAccessToken(token) {
       ...token,
       accessToken: refreshedTokens.access_token,
       accessTokenExpires: Date.now() + refreshedTokens.expires_in * 1000,
-      refreshToken: refreshedTokens.refresh_token ?? token.refreshToken // Fall back to old refresh token
+      refreshToken: refreshedTokens.refresh_token ?? token.refreshToken, // Fall back to old refresh token
     };
   } catch (error) {
     console.log(error);
 
     return {
       ...token,
-      error: "RefreshAccessTokenError"
+      error: "RefreshAccessTokenError",
     };
   }
 }
 //end refresh token code
 
 export default NextAuth({
-  // providers: [
-  //   Providers.Google({
-  //     clientId: process.env.GOOGLE_ID,
-  //     clientSecret: process.env.GOOGLE_SECRET
-  //   })
-
-      providers: [
+  providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET
-    })
-  ],
+      clientSecret: process.env.GOOGLE_SECRET,
+    }),
 
     // Providers.Email({
     //   server: {
@@ -93,9 +78,9 @@ export default NextAuth({
     //   },
     //   from: process.env.EMAIL_FROM
     // }),
-  
+  ],
 
-  adapter: FirebaseAdapter(firestore),
+  adapter: FirestoreAdapter(firestore),
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases
   //
@@ -110,37 +95,9 @@ export default NextAuth({
   secret: process.env.SECRET,
 
   session: {
-    // Use JSON Web Tokens for session instead of database sessions.
-    // This option can be used with or without a database for users/accounts.
-    // Note: `jwt` is automatically set to `true` if no database is specified.
-    jwt: true
-    // Seconds - How long until an idle session expires and is no longer valid.
-    // maxAge: 30 * 24 * 60 * 60, // 30 days
-    // Seconds - Throttle how frequently to write to database to extend a session.
-    // Use it to limit write operations. Set to 0 to always update the database.
-    // Note: This option is ignored if using JSON Web Tokens
-    // updateAge: 24 * 60 * 60, // 24 hours
+    jwt: true,
   },
 
-  // JSON Web tokens are only used for sessions if the `jwt: true` session
-  // option is set - or by default if no database is specified.
-  // https://next-auth.js.org/configuration/options#jwt
-  jwt: {
-    // A secret to use for key generation (you should set this explicitly)
-    // secret: 'INp8IvdIyeMcoGAgFGoA61DdBglwwSqnXJZkgz8PSnw',
-    // Set to true to use encryption (default: false)
-    // encryption: true,
-    // You can define your own encode/decode functions for signing and encryption
-    // if you want to override the default behaviour.
-    // encode: async ({ secret, token, maxAge }) => {},
-    // decode: async ({ secret, token, maxAge }) => {},
-  },
-
-  // You can define custom pages to override the built-in ones. These will be regular Next.js pages
-  // so ensure that they are placed outside of the '/api' folder, e.g. signIn: '/auth/mycustom-signin'
-  // The routes shown here are the default URLs that will be used when a custom
-  // pages is not specified for that route.
-  // https://next-auth.js.org/configuration/pages
   pages: {
     // signIn: '/signin',  // Displays signin buttons
     //  signOut: '/auth/signout', // Displays form with sign out button
@@ -177,7 +134,7 @@ export default NextAuth({
           accessToken: account.access_token,
           accessTokenExpires: Date.now() + account.expires_in * 1000,
           refreshToken: account.refresh_token,
-          user
+          user,
         };
       }
 
@@ -196,7 +153,7 @@ export default NextAuth({
 
       return session;
       //new code ends
-    }
+    },
   },
 
   // Events are useful for loggingyarn dev
@@ -209,5 +166,5 @@ export default NextAuth({
   theme: "dark",
 
   // Enable debug messages in the console if you are having problems
-  debug: true
+  debug: true,
 });

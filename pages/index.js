@@ -1,4 +1,4 @@
-import BodyClass from "./BodyClass";
+// import BodyClass from "./BodyClass";
 import Header from "./src/Header";
 //import Bodydata from './src/Bodydata';
 import Footer from "./src/Footer";
@@ -27,7 +27,6 @@ export default function Home() {
       {/* page-wrapper start */}
       <div className="wrapper">
         <Header />
-        {/* <Bodydata />  //data from old website*/}
         <Homepage />
         <Footer />
       </div>

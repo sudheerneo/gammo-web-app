@@ -1,79 +1,82 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
-import $ from "jquery";
+import Script from "next/script";
+
 export default function Footer() {
-    const [ismobile, setMobile] = useState(false);
-    const [cliwidth, setcliwidth] = useState(null);
-    const [cliheight, setcliheight] = useState(null);
-    const [rotationWarn, setrotationWarn] = useState("none");
+  const [ismobile, setMobile] = useState(false);
+  const [cliwidth, setCliWidth] = useState(null);
+  const [cliheight, setCliHeight] = useState(null);
+  const [rotationWarn, setRotationWarn] = useState("none");
 
-    useEffect(async () => {
-        // detect rotation
-        const screenWidth = await window.innerWidth;
+  useEffect(() => {
+    function handleResize() {
+      setCliHeight(window.innerHeight);
+      setCliWidth(window.innerWidth);
 
-        window.addEventListener("resize", () => {
-            setcliheight(window.innerHeight);
-            setcliwidth(window.innerWidth);
-        });
-        const screenHeight = window.innerHeight;
+      // rotation warning logic
+      if (window.innerHeight < 400) {
+        setRotationWarn("block");
+      } else if (window.innerHeight > window.innerWidth) {
+        setRotationWarn("none");
+      }
 
-        {
-            cliheight < 400 ? setrotationWarn("block") : null;
-        }
-        {
-            cliheight > cliwidth ? setrotationWarn("none") : null;
-        }
+      // detect mobile
+      setMobile(window.innerWidth < 768);
+    }
 
-        // detect mobile
-        screenWidth < 768 ? setMobile(true) : setMobile(false);
-    }, []);
+    // initialize values
+    handleResize();
 
-    return (
-        <div>
-            <footer>
-                <div className="container">
-                    <div className="row footer-bottom align-items-center">
-                        <div className="col-lg-7 col-md-6 text-md-left text-center">
-                            <p className="copy-right-text">
-                                All Rights Reserved By <a href="#0">Gammo</a> ©{" "}
-                                {new Date().getFullYear()}
-                            </p>
-                        </div>
-                        <div className="col-lg-5 col-md-6 mt-md-0 mt-3">
-                            <ul className="social-links justify-content-md-end justify-content-center">
-                                <li>
-                                    <a href="#0">G</a>
-                                </li>
-                                <li>
-                                    <a href="#0">A</a>
-                                </li>
-                                <li>
-                                    <a href="#0">M</a>
-                                </li>
-                                <li>
-                                    <a href="#0">M</a>
-                                </li>
-                                <li>
-                                    <a href="#0">O</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-            {/* <script data-cfasync="false" src="assets/js/email-decode.min.js"></script> */}
-            {/* <script src="assets/js/email-decode.min.js"></script> */}
-            <script src="assets/js/jquery-3.5.1.min.js"></script>
-            <script src="assets/js/bootstrap.bundle.min.js"></script>
-            <script src="assets/js/jquery.nice-select.min.js"></script>
-            <script src="assets/js/lightcase.js"></script>
-            <script src="assets/js/wow.min.js"></script>
-            <script src="assets/js/slick.min.js"></script>
-            <script src="assets/js/TweenMax.min.js"></script>
-            {/* <script src="assets/js/contact.js"></script> */}
-            <script src="assets/js/jquery.paroller.min.js"></script>
-            <script src="assets/js/app.js"></script>
+  return (
+    <>
+      <footer>
+        <div className="container">
+          <div className="row footer-bottom align-items-center">
+            <div className="col-lg-7 col-md-6 text-md-left text-center">
+              <p className="copy-right-text">
+                All Rights Reserved By <a href="#0">Gammo</a> ©{" "}
+                {new Date().getFullYear()}
+              </p>
+            </div>
+            <div className="col-lg-5 col-md-6 mt-md-0 mt-3">
+              <ul className="social-links justify-content-md-end justify-content-center">
+                {["G", "A", "M", "M", "O"].map((letter, idx) => (
+                  <li key={idx}>
+                    <a href="#0">{letter}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-    );
+      </footer>
+
+      {/* Load scripts properly with Next.js Script */}
+      <Script
+        src="/assets/js/jquery-3.5.1.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="/assets/js/bootstrap.bundle.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="/assets/js/jquery.nice-select.min.js"
+        strategy="afterInteractive"
+      />
+      <Script src="/assets/js/lightcase.js" strategy="afterInteractive" />
+      <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
+      <Script src="/assets/js/slick.min.js" strategy="afterInteractive" />
+      <Script src="/assets/js/TweenMax.min.js" strategy="afterInteractive" />
+      {/* <Script src="/assets/js/contact.js" strategy="afterInteractive" /> */}
+      <Script
+        src="/assets/js/jquery.paroller.min.js"
+        strategy="afterInteractive"
+      />
+      <Script src="/assets/js/app.js" strategy="afterInteractive" />
+    </>
+  );
 }
