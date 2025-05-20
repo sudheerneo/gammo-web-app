@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 export default class Header extends Component {
   constructor() {
     super();
-    this.state = { title: "Gammo | Demo Project | Developed by Sudheer Neo" };
+    this.state = { title: "Gammo | Project Demo | Developed by Sudheer Neo" };
   }
 
   componentDidMount() {
